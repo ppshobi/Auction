@@ -10,8 +10,10 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
+                                <li><a><i class="fa fa-edit"></i> Categories &amp; Products <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu" style="display: none">
+                                        <li><a href="addcat.php">Add Category</a>
+                                        </li>
                                         <li><a href="form.php">General Form</a>
                                         </li>
                                         <li><a href="form_advanced.php">Advanced Components</a>
