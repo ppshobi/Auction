@@ -37,8 +37,8 @@
 								<ul class="d_inline_b horizontal_list clearfix f_size_small users_nav">
 									<li><a href="#" class="default_t_color" data-popup="#login_popup">Log in</a></li>
 									<li><a href="#" class="default_t_color">My Account</a></li>
-									<li><a href="orders_list.html" class="default_t_color">List Orders</a></li>
-									<li><a href="checkout.html" class="default_t_color">Checkout</a></li>
+									<li><a href="orders_list.php" class="default_t_color">List Orders</a></li>
+									<li><a href="checkout.php" class="default_t_color">Checkout</a></li>
 								</ul>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-2 t_align_c t_xs_align_c">
@@ -75,7 +75,7 @@
 						<div class="container">
 							<div class="clearfix row">
 								<div class="col-lg-2 t_md_align_c m_md_bottom_15">
-									<a href="index.html" class="logo d_md_inline_b">
+									<a href="index.php" class="logo d_md_inline_b">
 										<img src="images/logo.png" alt="">
 									</a>
 								</div>
@@ -90,28 +90,28 @@
 										<!--main menu-->
 										<nav role="navigation" class="f_left f_xs_none d_xs_none m_right_35 m_md_right_30 m_sm_right_0">	
 											<ul class="horizontal_list main_menu type_2 clearfix">
-												<li class="current relative f_xs_none m_xs_bottom_5 m_left_10 m_xs_left_0"><a href="index.html" class="tr_delay_hover color_dark tt_uppercase r_corners"><b>Home</b></a>
+												<li class="current relative f_xs_none m_xs_bottom_5 m_left_10 m_xs_left_0"><a href="index.php" class="tr_delay_hover color_dark tt_uppercase r_corners"><b>Home</b></a>
 													<!--sub menu-->
 													<div class="sub_menu_wrap top_arrow d_xs_none type_2 tr_all_hover clearfix r_corners">
 														<ul class="sub_menu">
-															<li><a class="color_dark tr_delay_hover" href="index.html">Home Variant 1</a></li>
-															<li><a class="color_dark tr_delay_hover" href="index_layout_2.html">Home Variant 2</a></li>
-															<li><a class="color_dark tr_delay_hover" href="index_layout_wide.html">Home Variant 3</a></li>
-															<li><a class="color_dark tr_delay_hover" href="index_corporate.html">Home Variant 4</a></li>
+															<li><a class="color_dark tr_delay_hover" href="index.php">Home Variant 1</a></li>
+															<li><a class="color_dark tr_delay_hover" href="index_layout_2.php">Home Variant 2</a></li>
+															<li><a class="color_dark tr_delay_hover" href="index_layout_wide.php">Home Variant 3</a></li>
+															<li><a class="color_dark tr_delay_hover" href="index_corporate.php">Home Variant 4</a></li>
 														</ul>
 													</div>
 												</li>
-												<li class="relative f_xs_none m_xs_bottom_5 m_left_10 m_xs_left_0"><a href="index_layout_wide.html" class="tr_delay_hover color_dark tt_uppercase r_corners"><b>Sliders</b></a>
+												<li class="relative f_xs_none m_xs_bottom_5 m_left_10 m_xs_left_0"><a href="index_layout_wide.php" class="tr_delay_hover color_dark tt_uppercase r_corners"><b>Sliders</b></a>
 													<!--sub menu-->
 													<div class="sub_menu_wrap top_arrow d_xs_none type_2 tr_all_hover clearfix r_corners">
 														<ul class="sub_menu">
-															<li><a class="color_dark tr_delay_hover" href="index_layout_wide.html">Revolution Slider</a></li>
-													<li><a class="color_dark tr_delay_hover" href="index.html">Camera Slider</a></li>
-													<li><a class="color_dark tr_delay_hover" href="index_layout_2.html">Flex Slider</a></li>
+															<li><a class="color_dark tr_delay_hover" href="index_layout_wide.php">Revolution Slider</a></li>
+													<li><a class="color_dark tr_delay_hover" href="index.php">Camera Slider</a></li>
+													<li><a class="color_dark tr_delay_hover" href="index_layout_2.php">Flex Slider</a></li>
 														</ul>
 													</div>
 												</li>
-												<li class="relative f_xs_none m_xs_bottom_5 m_left_10 m_xs_left_0"><a href="category_grid.html" class="tr_delay_hover color_dark tt_uppercase r_corners"><b>Shop</b></a>
+												<li class="relative f_xs_none m_xs_bottom_5 m_left_10 m_xs_left_0"><a href="category_grid.php" class="tr_delay_hover color_dark tt_uppercase r_corners"><b>Shop</b></a>
 													<!--sub menu-->
 													<div class="sub_menu_wrap top_arrow d_xs_none tr_all_hover clearfix r_corners w_xs_auto">
 														<div class="f_left f_xs_none">
@@ -152,57 +152,57 @@
 														<img src="images/woman_image_1.jpg" class="d_sm_none f_right m_bottom_10" alt="">
 													</div>
 												</li>
-												<li class="relative f_xs_none m_xs_bottom_5 m_left_10 m_xs_left_0"><a href="category_grid.html" class="tr_delay_hover color_dark tt_uppercase r_corners"><b>Portfolio</b></a>
+												<li class="relative f_xs_none m_xs_bottom_5 m_left_10 m_xs_left_0"><a href="category_grid.php" class="tr_delay_hover color_dark tt_uppercase r_corners"><b>Portfolio</b></a>
 													<!--sub menu-->
 													<div class="sub_menu_wrap top_arrow d_xs_none type_2 tr_all_hover clearfix r_corners">
 														<ul class="sub_menu">
-															<li><a class="color_dark tr_delay_hover" href="portfolio_two_columns.html">Portfolio 2 Columns</a></li>
-															<li><a class="color_dark tr_delay_hover" href="portfolio_three_columns.html">Portfolio 3 Columns</a></li>
-															<li><a class="color_dark tr_delay_hover" href="portfolio_four_columns.html">Portfolio 4 Columns</a></li>
-															<li><a class="color_dark tr_delay_hover" href="portfolio_masonry.html">Masonry Portfolio</a></li>
-															<li><a class="color_dark tr_delay_hover" href="portfolio_single_1.html">Single Portfolio Post v1</a></li>
-															<li><a class="color_dark tr_delay_hover" href="portfolio_single_2.html">Single Portfolio Post v2</a></li>
+															<li><a class="color_dark tr_delay_hover" href="portfolio_two_columns.php">Portfolio 2 Columns</a></li>
+															<li><a class="color_dark tr_delay_hover" href="portfolio_three_columns.php">Portfolio 3 Columns</a></li>
+															<li><a class="color_dark tr_delay_hover" href="portfolio_four_columns.php">Portfolio 4 Columns</a></li>
+															<li><a class="color_dark tr_delay_hover" href="portfolio_masonry.php">Masonry Portfolio</a></li>
+															<li><a class="color_dark tr_delay_hover" href="portfolio_single_1.php">Single Portfolio Post v1</a></li>
+															<li><a class="color_dark tr_delay_hover" href="portfolio_single_2.php">Single Portfolio Post v2</a></li>
 														</ul>
 													</div>
 												</li>
-												<li class="relative f_xs_none m_xs_bottom_5 m_left_10 m_xs_left_0"><a href="category_grid.html" class="tr_delay_hover color_dark tt_uppercase r_corners"><b>Pages</b></a>
+												<li class="relative f_xs_none m_xs_bottom_5 m_left_10 m_xs_left_0"><a href="category_grid.php" class="tr_delay_hover color_dark tt_uppercase r_corners"><b>Pages</b></a>
 													<!--sub menu-->
 													<div class="sub_menu_wrap top_arrow d_xs_none type_2 tr_all_hover clearfix r_corners">
 														<ul class="sub_menu">
-															<li><a class="color_dark tr_delay_hover" href="category_grid.html">Grid View Category Page</a></li>
-															<li><a class="color_dark tr_delay_hover" href="category_list.html">List View Category Page</a></li>
-															<li><a class="color_dark tr_delay_hover" href="category_no_products.html">Category Page Without Products</a></li>
-															<li><a class="color_dark tr_delay_hover" href="product_page_sidebar.html">Product Page With Sidebar</a></li>
-															<li><a class="color_dark tr_delay_hover" href="full_width_product_page.html">Full Width Product Page</a></li>
-                                                            <li><a class="color_dark tr_delay_hover" href="wishlist.html">Wishlist</a></li>
-															<li><a class="color_dark tr_delay_hover" href="compare_products.html">Compare Products</a></li>
-															<li><a class="color_dark tr_delay_hover" href="checkout.html">Checkout</a></li>
-															<li><a class="color_dark tr_delay_hover" href="manufacturers.html">Manufacturers</a></li>
-															<li><a class="color_dark tr_delay_hover" href="manufacturer_details.html">Manufacturer Page</a></li>
-															<li><a class="color_dark tr_delay_hover" href="orders_list.html">Orders List</a></li>
-															<li><a class="color_dark tr_delay_hover" href="order_details.html">Order Details</a></li>
+															<li><a class="color_dark tr_delay_hover" href="category_grid.php">Grid View Category Page</a></li>
+															<li><a class="color_dark tr_delay_hover" href="category_list.php">List View Category Page</a></li>
+															<li><a class="color_dark tr_delay_hover" href="category_no_products.php">Category Page Without Products</a></li>
+															<li><a class="color_dark tr_delay_hover" href="product_page_sidebar.php">Product Page With Sidebar</a></li>
+															<li><a class="color_dark tr_delay_hover" href="full_width_product_page.php">Full Width Product Page</a></li>
+                                                            <li><a class="color_dark tr_delay_hover" href="wishlist.php">Wishlist</a></li>
+															<li><a class="color_dark tr_delay_hover" href="compare_products.php">Compare Products</a></li>
+															<li><a class="color_dark tr_delay_hover" href="checkout.php">Checkout</a></li>
+															<li><a class="color_dark tr_delay_hover" href="manufacturers.php">Manufacturers</a></li>
+															<li><a class="color_dark tr_delay_hover" href="manufacturer_details.php">Manufacturer Page</a></li>
+															<li><a class="color_dark tr_delay_hover" href="orders_list.php">Orders List</a></li>
+															<li><a class="color_dark tr_delay_hover" href="order_details.php">Order Details</a></li>
 														</ul>
 													</div>
 												</li>
-												<li class="relative f_xs_none m_xs_bottom_5 m_left_10 m_xs_left_0"><a href="blog.html" class="tr_delay_hover color_dark tt_uppercase r_corners"><b>Blog</b></a>
+												<li class="relative f_xs_none m_xs_bottom_5 m_left_10 m_xs_left_0"><a href="blog.php" class="tr_delay_hover color_dark tt_uppercase r_corners"><b>Blog</b></a>
 													<!--sub menu-->
 													<div class="sub_menu_wrap top_arrow d_xs_none type_2 tr_all_hover clearfix r_corners">
 														<ul class="sub_menu">
-															<li><a class="color_dark tr_delay_hover" href="blog.html">Blog page</a></li>
-															<li><a class="color_dark tr_delay_hover" href="blog_post.html">Single Blog Post page</a></li>
+															<li><a class="color_dark tr_delay_hover" href="blog.php">Blog page</a></li>
+															<li><a class="color_dark tr_delay_hover" href="blog_post.php">Single Blog Post page</a></li>
 														</ul>
 													</div>
 												</li>
-												<li class="relative f_xs_none m_xs_bottom_5 m_left_10 m_xs_left_0"><a href="blog.html" class="tr_delay_hover color_dark tt_uppercase r_corners"><b>Features</b></a>
+												<li class="relative f_xs_none m_xs_bottom_5 m_left_10 m_xs_left_0"><a href="blog.php" class="tr_delay_hover color_dark tt_uppercase r_corners"><b>Features</b></a>
 													<!--sub menu-->
 													<div class="sub_menu_wrap top_arrow d_xs_none type_2 tr_all_hover clearfix r_corners">
 														<ul class="sub_menu">
-															<li><a class="color_dark tr_delay_hover" href="features_shortcodes.html">Shortcodes</a></li>
-															<li><a class="color_dark tr_delay_hover" href="features_typography.html">Typography</a></li>
+															<li><a class="color_dark tr_delay_hover" href="features_shortcodes.php">Shortcodes</a></li>
+															<li><a class="color_dark tr_delay_hover" href="features_typography.php">Typography</a></li>
 														</ul>
 													</div>
 												</li>
-												<li class="relative f_xs_none m_xs_bottom_5 m_left_10 m_xs_left_0"><a href="contact.html" class="tr_delay_hover color_dark tt_uppercase r_corners"><b>Contact</b></a></li>
+												<li class="relative f_xs_none m_xs_bottom_5 m_left_10 m_xs_left_0"><a href="contact.php" class="tr_delay_hover color_dark tt_uppercase r_corners"><b>Contact</b></a></li>
 											</ul>
 										</nav>
 										<button class="f_right search_button tr_all_hover f_xs_none d_xs_none">

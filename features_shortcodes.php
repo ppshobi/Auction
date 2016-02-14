@@ -54,7 +54,7 @@
 				<section class="h_bot_part container">
 					<div class="clearfix row">
 						<div class="col-lg-6 col-md-6 col-sm-4 t_xs_align_c">
-							<a href="index.html" class="logo m_xs_bottom_15 d_xs_inline_b">
+							<a href="index.php" class="logo m_xs_bottom_15 d_xs_inline_b">
 								<img src="images/logo.png" alt="">
 							</a>
 						</div>
@@ -182,28 +182,28 @@
 						<!--main menu-->
 						<nav role="navigation" class="f_left f_xs_none d_xs_none">	
 							<ul class="horizontal_list main_menu clearfix">
-								<li class="relative f_xs_none m_xs_bottom_5"><a href="index.html" class="tr_delay_hover color_light tt_uppercase"><b>Home</b></a>
+								<li class="relative f_xs_none m_xs_bottom_5"><a href="index.php" class="tr_delay_hover color_light tt_uppercase"><b>Home</b></a>
 									<!--sub menu-->
 									<div class="sub_menu_wrap top_arrow d_xs_none type_2 tr_all_hover clearfix r_corners">
 										<ul class="sub_menu">
-											<li><a class="color_dark tr_delay_hover" href="index.html">Home Variant 1</a></li>
-											<li><a class="color_dark tr_delay_hover" href="index_layout_2.html">Home Variant 2</a></li>
-											<li><a class="color_dark tr_delay_hover" href="index_layout_wide.html">Home Variant 3</a></li>
-											<li><a class="color_dark tr_delay_hover" href="index_corporate.html">Home Variant 4</a></li>
+											<li><a class="color_dark tr_delay_hover" href="index.php">Home Variant 1</a></li>
+											<li><a class="color_dark tr_delay_hover" href="index_layout_2.php">Home Variant 2</a></li>
+											<li><a class="color_dark tr_delay_hover" href="index_layout_wide.php">Home Variant 3</a></li>
+											<li><a class="color_dark tr_delay_hover" href="index_corporate.php">Home Variant 4</a></li>
 										</ul>
 									</div>
 								</li>
-								<li class="relative f_xs_none m_xs_bottom_5"><a href="index_layout_wide.html" class="tr_delay_hover color_light tt_uppercase"><b>Sliders</b></a>
+								<li class="relative f_xs_none m_xs_bottom_5"><a href="index_layout_wide.php" class="tr_delay_hover color_light tt_uppercase"><b>Sliders</b></a>
 									<!--sub menu-->
 									<div class="sub_menu_wrap top_arrow d_xs_none type_2 tr_all_hover clearfix r_corners">
 										<ul class="sub_menu">
-											<li><a class="color_dark tr_delay_hover" href="index_layout_wide.html">Revolution Slider</a></li>
-											<li><a class="color_dark tr_delay_hover" href="index.html">Camera Slider</a></li>
-											<li><a class="color_dark tr_delay_hover" href="index_layout_2.html">Flex Slider</a></li>
+											<li><a class="color_dark tr_delay_hover" href="index_layout_wide.php">Revolution Slider</a></li>
+											<li><a class="color_dark tr_delay_hover" href="index.php">Camera Slider</a></li>
+											<li><a class="color_dark tr_delay_hover" href="index_layout_2.php">Flex Slider</a></li>
 										</ul>
 									</div>
 								</li>
-								<li class="relative f_xs_none m_xs_bottom_5"><a href="category_grid.html" class="tr_delay_hover color_light tt_uppercase"><b>Shop</b></a>
+								<li class="relative f_xs_none m_xs_bottom_5"><a href="category_grid.php" class="tr_delay_hover color_light tt_uppercase"><b>Shop</b></a>
 									<!--sub menu-->
 									<div class="sub_menu_wrap top_arrow d_xs_none tr_all_hover clearfix r_corners w_xs_auto">
 										<div class="f_left f_xs_none">
@@ -248,53 +248,53 @@
 									<!--sub menu-->
 									<div class="sub_menu_wrap top_arrow d_xs_none type_2 tr_all_hover clearfix r_corners">
 										<ul class="sub_menu">
-											<li><a class="color_dark tr_delay_hover" href="portfolio_two_columns.html">Portfolio 2 Columns</a></li>
-											<li><a class="color_dark tr_delay_hover" href="portfolio_three_columns.html">Portfolio 3 Columns</a></li>
-											<li><a class="color_dark tr_delay_hover" href="portfolio_four_columns.html">Portfolio 4 Columns</a></li>
-											<li><a class="color_dark tr_delay_hover" href="portfolio_masonry.html">Masonry Portfolio</a></li>
-											<li><a class="color_dark tr_delay_hover" href="portfolio_single_1.html">Single Portfolio Post v1</a></li>
-											<li><a class="color_dark tr_delay_hover" href="portfolio_single_2.html">Single Portfolio Post v2</a></li>
+											<li><a class="color_dark tr_delay_hover" href="portfolio_two_columns.php">Portfolio 2 Columns</a></li>
+											<li><a class="color_dark tr_delay_hover" href="portfolio_three_columns.php">Portfolio 3 Columns</a></li>
+											<li><a class="color_dark tr_delay_hover" href="portfolio_four_columns.php">Portfolio 4 Columns</a></li>
+											<li><a class="color_dark tr_delay_hover" href="portfolio_masonry.php">Masonry Portfolio</a></li>
+											<li><a class="color_dark tr_delay_hover" href="portfolio_single_1.php">Single Portfolio Post v1</a></li>
+											<li><a class="color_dark tr_delay_hover" href="portfolio_single_2.php">Single Portfolio Post v2</a></li>
 										</ul>
 									</div>
 								</li>
-								<li class="relative f_xs_none m_xs_bottom_5"><a href="category_grid.html" class="tr_delay_hover color_light tt_uppercase"><b>Pages</b></a>
+								<li class="relative f_xs_none m_xs_bottom_5"><a href="category_grid.php" class="tr_delay_hover color_light tt_uppercase"><b>Pages</b></a>
 									<!--sub menu-->
 									<div class="sub_menu_wrap top_arrow d_xs_none type_2 tr_all_hover clearfix r_corners">
 										<ul class="sub_menu">
-											<li><a class="color_dark tr_delay_hover" href="category_grid.html">Grid View Category Page</a></li>
-											<li><a class="color_dark tr_delay_hover" href="category_list.html">List View Category Page</a></li>
-											<li><a class="color_dark tr_delay_hover" href="category_no_products.html">Category Page Without Products</a></li>
-											<li><a class="color_dark tr_delay_hover" href="product_page_sidebar.html">Product Page With Sidebar</a></li>
-											<li><a class="color_dark tr_delay_hover" href="full_width_product_page.html">Full Width Product Page</a></li>
-                                            <li><a class="color_dark tr_delay_hover" href="wishlist.html">Wishlist</a></li>
-											<li><a class="color_dark tr_delay_hover" href="compare_products.html">Compare Products</a></li>
-											<li><a class="color_dark tr_delay_hover" href="checkout.html">Checkout</a></li>
-											<li><a class="color_dark tr_delay_hover" href="manufacturers.html">Manufacturers</a></li>
-											<li><a class="color_dark tr_delay_hover" href="manufacturer_details.html">Manufacturer Page</a></li>
-											<li><a class="color_dark tr_delay_hover" href="orders_list.html">Orders List</a></li>
-											<li><a class="color_dark tr_delay_hover" href="order_details.html">Order Details</a></li>
+											<li><a class="color_dark tr_delay_hover" href="category_grid.php">Grid View Category Page</a></li>
+											<li><a class="color_dark tr_delay_hover" href="category_list.php">List View Category Page</a></li>
+											<li><a class="color_dark tr_delay_hover" href="category_no_products.php">Category Page Without Products</a></li>
+											<li><a class="color_dark tr_delay_hover" href="product_page_sidebar.php">Product Page With Sidebar</a></li>
+											<li><a class="color_dark tr_delay_hover" href="full_width_product_page.php">Full Width Product Page</a></li>
+                                            <li><a class="color_dark tr_delay_hover" href="wishlist.php">Wishlist</a></li>
+											<li><a class="color_dark tr_delay_hover" href="compare_products.php">Compare Products</a></li>
+											<li><a class="color_dark tr_delay_hover" href="checkout.php">Checkout</a></li>
+											<li><a class="color_dark tr_delay_hover" href="manufacturers.php">Manufacturers</a></li>
+											<li><a class="color_dark tr_delay_hover" href="manufacturer_details.php">Manufacturer Page</a></li>
+											<li><a class="color_dark tr_delay_hover" href="orders_list.php">Orders List</a></li>
+											<li><a class="color_dark tr_delay_hover" href="order_details.php">Order Details</a></li>
 										</ul>
 									</div>
 								</li>
-								<li class="relative f_xs_none m_xs_bottom_5"><a href="blog.html" class="tr_delay_hover color_light tt_uppercase"><b>Blog</b></a>
+								<li class="relative f_xs_none m_xs_bottom_5"><a href="blog.php" class="tr_delay_hover color_light tt_uppercase"><b>Blog</b></a>
 									<!--sub menu-->
 									<div class="sub_menu_wrap top_arrow d_xs_none type_2 tr_all_hover clearfix r_corners">
 										<ul class="sub_menu">
-											<li><a class="color_dark tr_delay_hover" href="blog.html">Blog page</a></li>
-											<li><a class="color_dark tr_delay_hover" href="blog_post.html">Single Blog Post page</a></li>
+											<li><a class="color_dark tr_delay_hover" href="blog.php">Blog page</a></li>
+											<li><a class="color_dark tr_delay_hover" href="blog_post.php">Single Blog Post page</a></li>
 										</ul>
 									</div>
 								</li>
-								<li class="current relative f_xs_none m_xs_bottom_5"><a href="features_shortcodes.html" class="tr_delay_hover color_light tt_uppercase"><b>Features</b></a>
+								<li class="current relative f_xs_none m_xs_bottom_5"><a href="features_shortcodes.php" class="tr_delay_hover color_light tt_uppercase"><b>Features</b></a>
 									<!--sub menu-->
 									<div class="sub_menu_wrap top_arrow d_xs_none type_2 tr_all_hover clearfix r_corners">
 										<ul class="sub_menu">
-											<li><a class="color_dark tr_delay_hover" href="features_shortcodes.html">Shortcodes</a></li>
-											<li><a class="color_dark tr_delay_hover" href="features_typography.html">Typography</a></li>
+											<li><a class="color_dark tr_delay_hover" href="features_shortcodes.php">Shortcodes</a></li>
+											<li><a class="color_dark tr_delay_hover" href="features_typography.php">Typography</a></li>
 										</ul>
 									</div>
 								</li>
-								<li class="relative f_xs_none m_xs_bottom_5"><a href="contact.html" class="tr_delay_hover color_light tt_uppercase"><b>Contact</b></a></li>
+								<li class="relative f_xs_none m_xs_bottom_5"><a href="contact.php" class="tr_delay_hover color_light tt_uppercase"><b>Contact</b></a></li>
 							</ul>
 						</nav>
 						<button class="f_right search_button tr_all_hover f_xs_none d_xs_none">
@@ -586,7 +586,7 @@
 									<img src="images/portfolio_img_07.jpg" alt="" class="tr_all_long_hover">
 									<div class="open_buttons clearfix">
 										<div class="f_left f_size_large tr_all_hover"><a href="images/img_01.jpg" role="button" class="color_light button_type_13 r_corners box_s_none d_block jackbox" data-group="gallery_1" data-title="title 1"><i class="fa fa-camera"></i></a></div>
-										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.html" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
+										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.php" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
 									</div>
 								</div>
 								<figcaption class="t_xs_align_l">
@@ -600,7 +600,7 @@
 									<img src="images/portfolio_img_08.jpg" alt="" class="tr_all_long_hover">
 									<div class="open_buttons clearfix">
 										<div class="f_left f_size_large tr_all_hover"><a href="http://www.youtube.com/watch?v=SZEflIVnhH8" role="button" class="color_light button_type_13 r_corners box_s_none d_block jackbox" data-group="gallery_1" data-title="title 2"><i class="fa fa-video-camera"></i></a></div>
-										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.html" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
+										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.php" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
 									</div>
 								</div>
 								<figcaption class="t_xs_align_l">
@@ -614,7 +614,7 @@
 									<img src="images/portfolio_img_09.jpg" alt="" class="tr_all_long_hover">
 									<div class="open_buttons clearfix">
 										<div class="f_left f_size_large tr_all_hover"><a href="images/img_03.jpg" role="button" class="color_light button_type_13 r_corners box_s_none d_block jackbox" data-group="gallery_1" data-title="title 3"><i class="fa fa-camera"></i></a></div>
-										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.html" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
+										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.php" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
 									</div>
 								</div>
 								<figcaption class="t_xs_align_l">
@@ -630,7 +630,7 @@
 									<img src="images/portfolio_img_43.jpg" alt="" class="tr_all_long_hover">
 									<div class="open_buttons clearfix">
 										<div class="f_left f_size_large tr_all_hover"><a href="images/img_12.jpg" role="button" class="color_light button_type_13 r_corners box_s_none d_block jackbox" data-group="gallery_1" data-title="title 4"><i class="fa fa-camera"></i></a></div>
-										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.html" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
+										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.php" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
 									</div>
 								</div>
 								<figcaption class="t_xs_align_l">
@@ -644,7 +644,7 @@
 									<img src="images/portfolio_img_44.jpg" alt="" class="tr_all_long_hover">
 									<div class="open_buttons clearfix">
 										<div class="f_left f_size_large tr_all_hover"><a href="images/img_10.jpg" role="button" class="color_light button_type_13 r_corners box_s_none d_block jackbox" data-group="gallery_1" data-title="title 5"><i class="fa fa-camera"></i></a></div>
-										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.html" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
+										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.php" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
 									</div>
 								</div>
 								<figcaption class="t_xs_align_l">
@@ -658,7 +658,7 @@
 									<img src="images/portfolio_img_45.jpg" alt="" class="tr_all_long_hover">
 									<div class="open_buttons clearfix">
 										<div class="f_left f_size_large tr_all_hover"><a href="images/img_13.jpg" role="button" class="color_light button_type_13 r_corners box_s_none d_block jackbox" data-group="gallery_1" data-title="title 6"><i class="fa fa-camera"></i></a></div>
-										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.html" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
+										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.php" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
 									</div>
 								</div>
 								<figcaption class="t_xs_align_l">
@@ -675,7 +675,7 @@
 									<img src="images/portfolio_img_16.jpg" alt="" class="tr_all_long_hover">
 									<div class="open_buttons clearfix">
 										<div class="f_left f_size_large tr_all_hover"><a href="images/img_01.jpg" role="button" class="color_light button_type_13 r_corners box_s_none d_block jackbox" data-group="gallery_2" data-title="title 1"><i class="fa fa-camera"></i></a></div>
-										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.html" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
+										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.php" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
 									</div>
 								</div>
 							</figure>
@@ -686,7 +686,7 @@
 									<img src="images/portfolio_img_17.jpg" alt="" class="tr_all_long_hover">
 									<div class="open_buttons clearfix">
 										<div class="f_left f_size_large tr_all_hover"><a href="http://vimeo.com/61099540" role="button" class="color_light button_type_13 r_corners box_s_none d_block jackbox" data-group="gallery_2" data-title="title 2"><i class="fa fa-video-camera"></i></a></div>
-										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.html" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
+										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.php" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
 									</div>
 								</div>
 							</figure>
@@ -697,7 +697,7 @@
 									<img src="images/portfolio_img_18.jpg" alt="" class="tr_all_long_hover">
 									<div class="open_buttons clearfix">
 										<div class="f_left f_size_large tr_all_hover"><a href="images/img_03.jpg" role="button" class="color_light button_type_13 r_corners box_s_none d_block jackbox" data-group="gallery_2" data-title="title 3"><i class="fa fa-camera"></i></a></div>
-										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.html" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
+										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.php" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
 									</div>
 								</div>
 							</figure>
@@ -708,7 +708,7 @@
 									<img src="images/portfolio_img_27.jpg" alt="" class="tr_all_long_hover">
 									<div class="open_buttons clearfix">
 										<div class="f_left f_size_large tr_all_hover"><a href="images/img_12.jpg" role="button" class="color_light button_type_13 r_corners box_s_none d_block jackbox" data-group="gallery_2" data-title="title 12"><i class="fa fa-camera"></i></a></div>
-										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.html" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
+										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.php" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
 									</div>
 								</div>
 							</figure>
@@ -721,7 +721,7 @@
 									<img src="images/portfolio_img_25.jpg" alt="" class="tr_all_long_hover">
 									<div class="open_buttons clearfix">
 										<div class="f_left f_size_large tr_all_hover"><a href="images/img_10.jpg" role="button" class="color_light button_type_13 r_corners box_s_none d_block jackbox" data-group="gallery_2" data-title="title 10"><i class="fa fa-camera"></i></a></div>
-										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.html" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
+										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.php" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
 									</div>
 								</div>
 							</figure>
@@ -732,7 +732,7 @@
 									<img src="images/portfolio_img_19.jpg" alt="" class="tr_all_long_hover">
 									<div class="open_buttons clearfix">
 										<div class="f_left f_size_large tr_all_hover"><a href="images/img_04.jpg" role="button" class="color_light button_type_13 r_corners box_s_none d_block jackbox" data-group="gallery_2" data-title="title 4"><i class="fa fa-camera"></i></a></div>
-										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.html" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
+										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.php" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
 									</div>
 								</div>
 							</figure>
@@ -743,7 +743,7 @@
 									<img src="images/portfolio_img_26.jpg" alt="" class="tr_all_long_hover">
 									<div class="open_buttons clearfix">
 										<div class="f_left f_size_large tr_all_hover"><a href="images/img_11.jpg" role="button" class="color_light button_type_13 r_corners box_s_none d_block jackbox" data-group="gallery_2" data-title="title 11"><i class="fa fa-camera"></i></a></div>
-										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.html" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
+										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.php" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
 									</div>
 								</div>
 							</figure>
@@ -754,7 +754,7 @@
 									<img src="images/portfolio_img_23.jpg" alt="" class="tr_all_long_hover">
 									<div class="open_buttons clearfix">
 										<div class="f_left f_size_large tr_all_hover"><a href="images/img_08.jpg" role="button" class="color_light button_type_13 r_corners box_s_none d_block jackbox" data-group="gallery_2" data-title="title 8"><i class="fa fa-camera"></i></a></div>
-										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.html" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
+										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.php" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
 									</div>
 								</div>
 							</figure>
@@ -768,7 +768,7 @@
 									<img src="images/portfolio_img_28.jpg" alt="" class="tr_all_long_hover">
 									<div class="open_buttons clearfix">
 										<div class="f_left f_size_large tr_all_hover"><a href="images/img_01.jpg" role="button" class="color_light button_type_13 r_corners box_s_none d_block jackbox" data-group="gallery_3" data-title="title 1"><i class="fa fa-camera"></i></a></div>
-										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.html" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
+										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.php" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
 									</div>
 								</div>
 							</figure>
@@ -779,7 +779,7 @@
 									<img src="images/portfolio_img_29.jpg" alt="" class="tr_all_long_hover">
 									<div class="open_buttons clearfix">
 										<div class="f_left f_size_large tr_all_hover"><a href="images/img_02.jpg" role="button" class="color_light button_type_13 r_corners box_s_none d_block jackbox" data-group="gallery_3" data-title="title 2"><i class="fa fa-camera"></i></a></div>
-										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.html" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
+										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.php" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
 									</div>
 								</div>
 							</figure>
@@ -788,7 +788,7 @@
 									<img src="images/portfolio_img_30.jpg" alt="" class="tr_all_long_hover">
 									<div class="open_buttons clearfix">
 										<div class="f_left f_size_large tr_all_hover"><a href="images/img_10.jpg" role="button" class="color_light button_type_13 r_corners box_s_none d_block jackbox" data-group="gallery_3" data-title="title 3"><i class="fa fa-camera"></i></a></div>
-										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.html" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
+										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.php" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
 									</div>
 								</div>
 							</figure>
@@ -799,7 +799,7 @@
 									<img src="images/portfolio_img_31.jpg" alt="" class="tr_all_long_hover">
 									<div class="open_buttons clearfix">
 										<div class="f_left f_size_large tr_all_hover"><a href="images/img_12.jpg" role="button" class="color_light button_type_13 r_corners box_s_none d_block jackbox" data-group="gallery_3" data-title="title 4"><i class="fa fa-camera"></i></a></div>
-										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.html" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
+										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.php" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
 									</div>
 								</div>
 							</figure>
@@ -808,7 +808,7 @@
 									<img src="images/portfolio_img_32.jpg" alt="" class="tr_all_long_hover">
 									<div class="open_buttons clearfix">
 										<div class="f_left f_size_large tr_all_hover"><a href="images/img_13.jpg" role="button" class="color_light button_type_13 r_corners box_s_none d_block jackbox" data-group="gallery_3" data-title="title 5"><i class="fa fa-camera"></i></a></div>
-										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.html" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
+										<div class="f_left m_left_10 f_size_large tr_all_hover"><a href="portfolio_single_1.php" role="button" class="color_light button_type_13 r_corners box_s_none d_block"><i class="fa fa-link"></i></a></div>
 									</div>
 								</div>
 							</figure>
