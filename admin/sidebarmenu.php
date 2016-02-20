@@ -14,6 +14,8 @@
                                     <ul class="nav child_menu" style="display: none">
                                         <li><a href="addcat.php">Add Category</a>
                                         </li>
+                                        <li><a href="addprod.php">Add Product</a>
+                                        </li>
                                         <li><a href="form.php">General Form</a>
                                         </li>
                                         <li><a href="form_advanced.php">Advanced Components</a>
