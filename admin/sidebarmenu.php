@@ -16,6 +16,8 @@
                                         </li>
                                         <li><a href="addprod.php">Add Product</a>
                                         </li>
+                                        <li><a href="viewproducts.php">View All Products</a>
+                                        </li>
                                         <li><a href="form.php">General Form</a>
                                         </li>
                                         <li><a href="form_advanced.php">Advanced Components</a>
