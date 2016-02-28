@@ -3,9 +3,14 @@ include_once("../includes/dbconn.php");
 include_once("../functions.php");
 include_once("adminfunctions.php");
 
-isloggedin();
-$seller=$_SESSION['id'];
 
+if(isadminloggedin()){
+    //do nothing stay here
+}
+else{
+    header("location:login.php");
+}
+$seller=$_SESSION['farmercart_admin_id'];
 ?>
 
 <!DOCTYPE html>
@@ -253,7 +258,7 @@ $seller=$_SESSION['id'];
                                         <tbody>
                                             <?php
                                             //grab the product details from produc table
-                                            $sql="SELECT * FROM product WHERE seller = $seller";
+                                            $sql="SELECT * FROM product";
                                             $result=mysqlexec($sql);
                                             if ($result) {
                                                 while($row=mysqli_fetch_assoc($result)){
