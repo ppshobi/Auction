@@ -7,8 +7,36 @@ isloggedin();
 $seller=$_SESSION['id'];
 ?>
 
+
 <?php
-addprod($seller);
+$prodid=$_GET['prodid'];
+//gather content for selected product
+$name='';
+$descr='';
+$cat='';
+$price='';
+$offerprice='';
+$unit='';
+$qty='';
+$visibility='';
+
+$sql= "SELECT * FROM product WHERE id = $prodid";
+$result = mysqlexec($result);
+if($result){
+    $row=mysqli_fetch_assoc($result){
+        $name=$row['name'];
+        $descr=$row['descr'];
+        $cat=$row['cat'];
+        $price=$row['price'];
+        $offerprice=$row['offerprice'];
+        $unit=$row['unit'];
+        $qty=$row['qty'];
+        $visibility=$row['visibility'];
+    }
+}
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -236,7 +264,7 @@ addprod($seller);
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
                                 <div class="x_title">
-                                    <h2>Fill Up this form to add a new product</h2>
+                                    <h2>Edit This Form</h2>
                                    
                                     <div class="clearfix"></div>
                                 </div>
@@ -248,20 +276,20 @@ addprod($seller);
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Product Name<span class="required">*</span>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" name="name"id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+                                                <input type="text" name="name"id="first-name" value="<?php echo $name; ?>" required="required" class="form-control col-md-7 col-xs-12">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="message" class="control-label col-md-3 col-sm-3 col-xs-12">Product Description (20 chars min, 1000 max) :</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <textarea id="descr" required="required" class="form-control" name="descr" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="1000" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long Description.." data-parsley-validation-threshold="10"></textarea>
+                                            <textarea id="descr" required="required" class="form-control" value="<?php echo $descr; ?>" name="descr" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="1000" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long Description.." data-parsley-validation-threshold="10"></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="heard" class="control-label col-md-3 col-sm-3 col-xs-12">Category *:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <select id="category" name="cat" class="form-control" required>
-                                                    <option value="">Choose..</option>
+                                                    <option value="value="<?php echo $category; ?>"">Choose..</option>
                                                     <?php
                                                     $sql="SELECT * FROM category ORDER BY id ASC";
                                                     $result=mysqlexec($sql);
@@ -279,20 +307,20 @@ addprod($seller);
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Price <span class="required">*</span>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="last-name" name="price" required="required" class="form-control col-md-7 col-xs-12">
+                                                <input type="text" value="<?php echo $price; ?>" id="last-name" name="price" required="required" class="form-control col-md-7 col-xs-12">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Offer Price</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="offerprice">
+                                                <input id="middle-name" value="<?php echo $offerprice; ?>" class="form-control col-md-7 col-xs-12" type="text" name="offerprice">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                          <label for="unit" class="control-label col-md-3 col-sm-3 col-xs-12">Unit *:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <select name="unit" id="unit" class="form-control" required>
-                                                    <option value="">Choose..</option>
+                                                    <option value="<?php echo $name; ?>">Choose..</option>
                                                     <option value="Kg">Kg</option>
                                                     <option value="Meter">Meter</option>
                                                     <option value="Litre">Litre</option>
@@ -302,61 +330,23 @@ addprod($seller);
                                         <div class="form-group">
                                             <label for="qty" class="control-label col-md-3 col-sm-3 col-xs-12">Quantity</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input id="qty" class="form-control col-md-7 col-xs-12" type="number" name="qty">
+                                                <input id="qty" value="<?php echo $qty; ?>"class="form-control col-md-7 col-xs-12" type="number" name="qty">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                         <label for="Visibility" class="control-label col-md-3 col-sm-3 col-xs-12">Visibility</label>
                                             <div class="radio col-md-6 col-sm-6 col-xs-12">
-                                                <input type="radio" class="flat" value="1" checked name="visibility"/>Public
-                                                <input type="radio" class="flat" value="0" name="visibility"/> Draft
+                                                <input type="radio" class="flat" value="1" <?php $visibility='1'?echo "checked";:; ?> name="visibility"/>Public
+                                                <input type="radio" class="flat" value="0" <?php $visibility='0'?echo "checked";:; ?> name="visibility"/> Draft
                                             </div>
                                         </div>
-
-                                        
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Upload Upto 5 Images<span class="required">*</span>
-                                            </label>
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input id="middle-name" class="form-control col-md-7 col-xs-12" type="file" name="pic1">
-                                            </div>      
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">
-                                            </label>
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input id="middle-name" class="form-control col-md-7 col-xs-12" type="file" name="pic2">
-                                            </div>      
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"></label>
-                                            
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input id="middle-name" class="form-control col-md-7 col-xs-12" type="file" name="pic3">
-                                            </div>      
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"></label>
-                                            
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input id="middle-name" class="form-control col-md-7 col-xs-12" type="file" name="pic4">
-                                            </div>      
-                                        </div>
-                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"></label>
-                                            
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input id="middle-name" class="form-control col-md-7 col-xs-12" type="file" name="pic5">
-                                            </div>      
-                                        </div>
-
 
                                         <div class="ln_solid"></div>
                                         <div class="form-group">
                                             <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                                                 <button type="submit" class="btn btn-primary">Cancel</button>
-                                                <button type="submit" class="btn btn-success">Create Product</button>
+                                                <button type="submit" class="btn btn-success">Update Product</button>
                                             </div>
                                         </div>
 

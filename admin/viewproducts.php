@@ -5,8 +5,9 @@ include_once("adminfunctions.php");
 
 isloggedin();
 $seller=$_SESSION['id'];
-$prodid=$_GET['prodid'];
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 

@@ -4,11 +4,11 @@
 $to = '';
 
 /* Subject */
-$subject = 'Flatastic Newsletter Form';
+$subject = 'Farmercart Newsletter Form';
 
 /* Headers */
-// $headers = 'From: Flatastic' . "\r\n" .
-//     'Reply-To: flatastic@flatastic.com' . "\r\n" .
+// $headers = 'From: Farmercart' . "\r\n" .
+//     'Reply-To: Farmercart@Farmercart.com' . "\r\n" .
 //     'X-Mailer: PHP/' . phpversion();
 
 $email = $_POST['newsletter-email'];

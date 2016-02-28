@@ -2,7 +2,7 @@
 <!--[if IE 9 ]><html class="ie9" lang="en"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
 	<head>
-		<title>Flatastic - Contact</title>
+		<title>Farmercart - Contact</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<!--meta info-->
@@ -307,7 +307,7 @@
 				<!--copyright part-->
 				<div class="footer_bottom_part">
 					<div class="container clearfix t_mxs_align_c">
-						<p class="f_left f_mxs_none m_mxs_bottom_10">&copy; 2014 <span class="color_light">Flatastic</span>. All Rights Reserved.</p>
+						<p class="f_left f_mxs_none m_mxs_bottom_10">&copy; 2014 <span class="color_light">Farmercart</span>. All Rights Reserved.</p>
 						<ul class="f_right horizontal_list clearfix f_mxs_none d_mxs_inline_b">
 							<li><img src="images/payment_img_1.png" alt=""></li>
 							<li class="m_left_5"><img src="images/payment_img_2.png" alt=""></li>
