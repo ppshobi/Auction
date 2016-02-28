@@ -23,7 +23,7 @@ if($count==1){
 
 // Register $myusername, $mypassword and redirect to file "login_success.php"
 	$_SESSION['username']= $myusername;
-	$_SESSION['id']=$id;
+	$_SESSION['farmercart_admin_id']=$id;
 	
 		header("location:../index.php");
 }

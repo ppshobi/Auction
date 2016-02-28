@@ -111,7 +111,7 @@ $sql="SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 
 
 		$result=mysqlexec($sql);
 		if ($result) {
-			echo "Successfully Added the Product";
+			echo "<script>alert(\"Successfully Added the Product\")</script>";
 		}
 		else{
 			echo  "Something gone wrong";
@@ -165,5 +165,14 @@ function photoupload($seller){
 			return false;
 		}
 		
+}
+
+function isadminloggedin(){
+	if(isset($_SESSION['farmercart_admin_id'])){
+ 		return true;
+	}
+	else{
+		return false;
+	}
 }
 ?>
