@@ -4,12 +4,16 @@ include_once("../functions.php");
 include_once("adminfunctions.php");
 
 isloggedin();
-$seller=$_SESSION['id'];
+$seller=$_SESSION['farmercart_admin_id'];
+$prodid=$_GET['prodid'];
+?>
+<?php 
+updateproduct($prodid);
+
 ?>
 
-
 <?php
-$prodid=$_GET['prodid'];
+
 //gather content for selected product
 $name='';
 $descr='';
@@ -21,18 +25,17 @@ $qty='';
 $visibility='';
 
 $sql= "SELECT * FROM product WHERE id = $prodid";
-$result = mysqlexec($result);
+$result = mysqlexec($sql);
 if($result){
-    $row=mysqli_fetch_assoc($result){
-        $name=$row['name'];
-        $descr=$row['descr'];
-        $cat=$row['cat'];
-        $price=$row['price'];
-        $offerprice=$row['offerprice'];
-        $unit=$row['unit'];
-        $qty=$row['qty'];
-        $visibility=$row['visibility'];
-    }
+    $row=mysqli_fetch_assoc($result);
+    $name=$row['name'];
+    $descr=$row['descr'];
+    $catid=$row['category'];
+    $price=$row['price'];
+    $offerprice=$row['offerprice'];
+    $unit=$row['unit'];
+    $qty=$row['qty'];
+    $visibility=$row['visibility'];
 }
 
 
@@ -255,7 +258,7 @@ if($result){
 
                     <div class="page-title">
                         <div class="title_left">
-                            <h3>Add A Product</h3>
+                            <h3>Edit Product</h3>
                         </div>
                       
                     </div>
@@ -264,7 +267,7 @@ if($result){
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
                                 <div class="x_title">
-                                    <h2>Edit This Form</h2>
+                                    <h2>Product ID = <?php echo $prodid;?></h2>
                                    
                                     <div class="clearfix"></div>
                                 </div>
@@ -282,22 +285,25 @@ if($result){
                                         <div class="form-group">
                                             <label for="message" class="control-label col-md-3 col-sm-3 col-xs-12">Product Description (20 chars min, 1000 max) :</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <textarea id="descr" required="required" class="form-control" value="<?php echo $descr; ?>" name="descr" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="1000" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long Description.." data-parsley-validation-threshold="10"></textarea>
+                                            <textarea id="descr" required="required" class="form-control"  name="descr" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="1000" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long Description.." data-parsley-validation-threshold="10"><?php echo $descr; ?></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="heard" class="control-label col-md-3 col-sm-3 col-xs-12">Category *:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <select id="category" name="cat" class="form-control" required>
-                                                    <option value="value="<?php echo $category; ?>"">Choose..</option>
+                                                    <option value="<?php echo $catid; ?>"><?php echo $cat;?></option>
                                                     <?php
-                                                    $sql="SELECT * FROM category ORDER BY id ASC";
+                                                    $sql="SELECT * FROM category";
                                                     $result=mysqlexec($sql);
                                                     while ($row=mysqli_fetch_assoc($result)) {
                                                         $cat=$row['cat'];
                                                         $catid=$row['id'];
                                                         echo "<option value=\"".$catid."\">". $cat ."</option>";
                                                     }
+                                                    ?>
+                                                   
+                                                    
                                                         
                                                     ?>
                                                 </select>
@@ -320,7 +326,7 @@ if($result){
                                          <label for="unit" class="control-label col-md-3 col-sm-3 col-xs-12">Unit *:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <select name="unit" id="unit" class="form-control" required>
-                                                    <option value="<?php echo $name; ?>">Choose..</option>
+                                                    <option value="<?php echo $unit; ?>">Choose..</option>
                                                     <option value="Kg">Kg</option>
                                                     <option value="Meter">Meter</option>
                                                     <option value="Litre">Litre</option>
@@ -337,8 +343,8 @@ if($result){
                                         <div class="form-group">
                                         <label for="Visibility" class="control-label col-md-3 col-sm-3 col-xs-12">Visibility</label>
                                             <div class="radio col-md-6 col-sm-6 col-xs-12">
-                                                <input type="radio" class="flat" value="1" <?php $visibility='1'?echo "checked";:; ?> name="visibility"/>Public
-                                                <input type="radio" class="flat" value="0" <?php $visibility='0'?echo "checked";:; ?> name="visibility"/> Draft
+                                                <input type="radio" class="flat" value="1" <?php if($visibility==1){echo "checked";}?> name="visibility"/>Public
+                                                <input type="radio" class="flat" value="0" <?php if($visibility==0){echo "checked";}?> name="visibility"/> Draft
                                             </div>
                                         </div>
 

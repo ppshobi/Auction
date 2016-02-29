@@ -25,7 +25,6 @@ function addcat(){
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$cat=$_POST['catname'];
 		$descr=$_POST['catdescr'];
-		
 		$sql = "INSERT INTO category (id, cat, descr) VALUES ('', '$cat', '$descr')";
 		$result=mysqlexec($sql);
 		if ($result) {
@@ -40,6 +39,31 @@ function addcat(){
 	}
 
 }
+function updateproduct($prodid){
+	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+		$name=$_POST['name'];
+		$descr=$_POST['descr'];
+		$cat=$_POST['cat'];
+		$price=$_POST['price'];
+		$offerprice=$_POST['offerprice'];
+		$unit=$_POST['unit'];
+		$qty=$_POST['qty'];
+		$visibility=$_POST['visibility'];		
+
+		$sql="UPDATE product SET name='$name', descr='$descr', category='$cat', price='$price', offerprice='$offerprice', qty='$qty', unit='$unit', visibility='$visibility' WHERE id=$prodid";
+
+		$result=mysqlexec($sql);
+		if ($result) {
+			echo "<script>alert(\"Successfully Updated the Product\")</script>";
+		}
+		else{
+			echo  "Something gone wrong";
+		}
+		}
+
+
+}
+
 
 
 function addprod(){
@@ -52,7 +76,7 @@ function addprod(){
 		$unit=$_POST['unit'];
 		$qty=$_POST['qty'];
 		$visibility=$_POST['visibility'];
-		$seller=$_SESSION['id'];
+		$seller=$_SESSION['farmercart_admin_id'];
 
 		//photoupload function
 		// $verify[]=photoupload($seller);
