@@ -1,9 +1,13 @@
 <?php session_start();
 include_once("../includes/dbconn.php");
-include_once("../functions.php");
 include_once("adminfunctions.php");
 
-isloggedin();
+if(isadminloggedin()){
+    //do nothing stay here
+}
+else{
+    header("location:login.php");
+}
 $seller=$_SESSION['farmercart_admin_id'];
 $prodid=$_GET['prodid'];
 ?>

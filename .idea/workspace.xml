@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0be0334f-1d82-4c12-a9a3-861d0604e611" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/adminfunctions.php" afterPath="$PROJECT_DIR$/admin/adminfunctions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/addcat.php" afterPath="$PROJECT_DIR$/admin/addcat.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/addprod.php" afterPath="$PROJECT_DIR$/admin/addprod.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/editprod.php" afterPath="$PROJECT_DIR$/admin/editprod.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/viewproducts.php" afterPath="$PROJECT_DIR$/admin/viewproducts.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="stmary's ecommerce.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,10 +34,10 @@
         <entry file="file://$PROJECT_DIR$/admin/viewproducts.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-0.0">
-              <caret line="280" column="0" selection-start-line="280" selection-start-column="0" selection-end-line="280" selection-end-column="0" />
+              <caret line="278" column="0" selection-start-line="278" selection-start-column="0" selection-end-line="278" selection-end-column="0" />
               <folding>
-                <marker date="1456638612720" expanded="true" signature="11872:11893" placeholder="SELECT * FRO..product..." />
-                <marker date="1456638612720" expanded="true" signature="12569:12603" placeholder="SELECT * FRO..category..." />
+                <marker date="1456745715314" expanded="true" signature="11838:11859" placeholder="SELECT * FRO..product..." />
+                <marker date="1456745715314" expanded="true" signature="12535:12569" placeholder="SELECT * FRO..category..." />
               </folding>
             </state>
           </provider>
@@ -42,13 +47,13 @@
         <entry file="file://$PROJECT_DIR$/admin/editprod.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="15.755352">
-              <caret line="346" column="0" selection-start-line="346" selection-start-column="0" selection-end-line="346" selection-end-column="0" />
+              <caret line="350" column="0" selection-start-line="350" selection-start-column="0" selection-end-line="350" selection-end-column="0" />
               <folding>
-                <marker date="1456739088001" expanded="true" signature="399:432" placeholder="SELECT * FRO..product..." />
-                <marker date="1456739088001" expanded="true" signature="14125:14147" placeholder="SELECT * FRO..category..." />
-                <marker date="1456739088001" expanded="true" signature="19276:19308" placeholder="{...}" />
-                <marker date="1456739088001" expanded="true" signature="22063:22088" placeholder="..." />
-                <marker date="1456739088001" expanded="true" signature="22884:22911" placeholder="{...}" />
+                <marker date="1456745758658" expanded="true" signature="445:478" placeholder="SELECT * FRO..product..." />
+                <marker date="1456745758658" expanded="true" signature="14171:14193" placeholder="SELECT * FRO..category..." />
+                <marker date="1456745758658" expanded="true" signature="19322:19354" placeholder="{...}" />
+                <marker date="1456745758658" expanded="true" signature="22109:22134" placeholder="..." />
+                <marker date="1456745758658" expanded="true" signature="22930:22957" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -337,62 +342,62 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/admin/viewproducts.php</url>
-          <line>12</line>
+          <line>11</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/admin/viewproducts.php</url>
-          <line>6</line>
+          <line>5</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/admin/viewproducts.php</url>
-          <line>260</line>
+          <line>259</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/admin/viewproducts.php</url>
-          <line>262</line>
+          <line>261</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/admin/viewproducts.php</url>
-          <line>264</line>
+          <line>263</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/admin/viewproducts.php</url>
-          <line>265</line>
+          <line>264</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/admin/viewproducts.php</url>
-          <line>266</line>
+          <line>265</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/admin/viewproducts.php</url>
-          <line>280</line>
+          <line>279</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/admin/viewproducts.php</url>
-          <line>279</line>
+          <line>278</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/admin/viewproducts.php</url>
-          <line>277</line>
+          <line>276</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/admin/editprod.php</url>
-          <line>37</line>
+          <line>41</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/admin/editprod.php</url>
-          <line>38</line>
+          <line>42</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
@@ -406,8 +411,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="280" column="0" selection-start-line="280" selection-start-column="0" selection-end-line="280" selection-end-column="0" />
           <folding>
-            <marker date="1456638612720" expanded="true" signature="11872:11893" placeholder="SELECT * FRO..product..." />
-            <marker date="1456638612720" expanded="true" signature="12569:12603" placeholder="SELECT * FRO..category..." />
+            <marker date="1456745715314" expanded="true" signature="11838:11859" placeholder="SELECT * FRO..product..." />
+            <marker date="1456745715314" expanded="true" signature="12535:12569" placeholder="SELECT * FRO..category..." />
           </folding>
         </state>
       </provider>
@@ -417,11 +422,11 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1456739088001" expanded="true" signature="399:432" placeholder="SELECT * FRO..product..." />
-            <marker date="1456739088001" expanded="true" signature="14125:14147" placeholder="SELECT * FRO..category..." />
-            <marker date="1456739088001" expanded="true" signature="19276:19308" placeholder="{...}" />
-            <marker date="1456739088001" expanded="true" signature="22063:22088" placeholder="..." />
-            <marker date="1456739088001" expanded="true" signature="22884:22911" placeholder="{...}" />
+            <marker date="1456745758658" expanded="true" signature="445:478" placeholder="SELECT * FRO..product..." />
+            <marker date="1456745758658" expanded="true" signature="14171:14193" placeholder="SELECT * FRO..category..." />
+            <marker date="1456745758658" expanded="true" signature="19322:19354" placeholder="{...}" />
+            <marker date="1456745758658" expanded="true" signature="22109:22134" placeholder="..." />
+            <marker date="1456745758658" expanded="true" signature="22930:22957" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -431,8 +436,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="280" column="0" selection-start-line="280" selection-start-column="0" selection-end-line="280" selection-end-column="0" />
           <folding>
-            <marker date="1456638612720" expanded="true" signature="11872:11893" placeholder="SELECT * FRO..product..." />
-            <marker date="1456638612720" expanded="true" signature="12569:12603" placeholder="SELECT * FRO..category..." />
+            <marker date="1456745715314" expanded="true" signature="11838:11859" placeholder="SELECT * FRO..product..." />
+            <marker date="1456745715314" expanded="true" signature="12535:12569" placeholder="SELECT * FRO..category..." />
           </folding>
         </state>
       </provider>
@@ -515,11 +520,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/viewproducts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="280" column="0" selection-start-line="280" selection-start-column="0" selection-end-line="280" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="278" column="0" selection-start-line="278" selection-start-column="0" selection-end-line="278" selection-end-column="0" />
           <folding>
-            <marker date="1456638612720" expanded="true" signature="11872:11893" placeholder="SELECT * FRO..product..." />
-            <marker date="1456638612720" expanded="true" signature="12569:12603" placeholder="SELECT * FRO..category..." />
+            <marker date="1456745715314" expanded="true" signature="11838:11859" placeholder="SELECT * FRO..product..." />
+            <marker date="1456745715314" expanded="true" signature="12535:12569" placeholder="SELECT * FRO..category..." />
           </folding>
         </state>
       </provider>
@@ -541,13 +546,13 @@
     <entry file="file://$PROJECT_DIR$/admin/editprod.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="15.755352">
-          <caret line="346" column="0" selection-start-line="346" selection-start-column="0" selection-end-line="346" selection-end-column="0" />
+          <caret line="350" column="0" selection-start-line="350" selection-start-column="0" selection-end-line="350" selection-end-column="0" />
           <folding>
-            <marker date="1456739088001" expanded="true" signature="399:432" placeholder="SELECT * FRO..product..." />
-            <marker date="1456739088001" expanded="true" signature="14125:14147" placeholder="SELECT * FRO..category..." />
-            <marker date="1456739088001" expanded="true" signature="19276:19308" placeholder="{...}" />
-            <marker date="1456739088001" expanded="true" signature="22063:22088" placeholder="..." />
-            <marker date="1456739088001" expanded="true" signature="22884:22911" placeholder="{...}" />
+            <marker date="1456745758658" expanded="true" signature="445:478" placeholder="SELECT * FRO..product..." />
+            <marker date="1456745758658" expanded="true" signature="14171:14193" placeholder="SELECT * FRO..category..." />
+            <marker date="1456745758658" expanded="true" signature="19322:19354" placeholder="{...}" />
+            <marker date="1456745758658" expanded="true" signature="22109:22134" placeholder="..." />
+            <marker date="1456745758658" expanded="true" signature="22930:22957" placeholder="{...}" />
           </folding>
         </state>
       </provider>

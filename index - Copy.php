@@ -62,6 +62,7 @@ include_once("functions.php");
 							$category=$row['category'];
 							$price=$row['price'];
 							$offerprice=$row['offerprice'];
+							$offerprice=$row['offerprice'];
 							$pic1=$row['pic1'];
 							$seller=$row['seller'];
 
@@ -75,15 +76,9 @@ include_once("functions.php");
 								echo "</a>";
 								echo "<!--description and price of product-->";
 								echo "<figcaption>";
-									echo "<h5 class=\"m_bottom_10\"><a href=\"#\" class=\"color_dark\">". $name . "</a></h5>";
+									echo "<h5 class=\"m_bottom_10\"><a href=\"#\" class=\"color_dark\">Eget elementum vel</a></h5>";
 									echo "<div class=\"clearfix\">";
-										echo "<p class=\"scheme_color f_left f_size_large m_bottom_15\">" ; if($offerprice<$price){
-												echo"<s>RS ". $price ."</s>";
-												echo " RS ". $offerprice ."</p>";
-											}else{
-												echo " RS ". $price ."</p>";
-											}
-										
+										echo "<p class=\"scheme_color f_left f_size_large m_bottom_15\"><s>RS 79.00</s> RS 36.00</p>";
 										
 									echo "</div>";
 									echo "<button class=\"button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0\">Add to Cart</button>";
@@ -92,7 +87,151 @@ include_once("functions.php");
 						echo "</div>";
 						}
 						?>
-						
+						<!--product item-->
+						<div class="product_item featured">
+							<figure class="r_corners photoframe shadow relative animate_ftb long">
+								<!--product preview-->
+								<a href="#" class="d_block relative wrapper pp_wrap">
+									<img src="images/product_img_2.jpg" class="tr_all_hover" alt="">
+									<span data-popup="#quick_view_product" class="box_s_none button_type_5 color_light r_corners tr_all_hover d_xs_none">Quick View</span>
+								</a>
+								<!--description and price of product-->
+								<figcaption>
+									<h5 class="m_bottom_10"><a href="#" class="color_dark">Ut tellus dolor dapibus</a></h5>
+									<div class="clearfix m_bottom_15">
+										<p class="scheme_color f_size_large f_left">RS 57.00</p>
+										
+									</div>
+									<div class="clearfix">
+										<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light f_left mw_0">Add to Cart</button>
+										
+									</div>
+								</figcaption>
+							</figure>
+						</div>
+						<!--product item-->
+						<div class="product_item new">
+							<figure class="r_corners photoframe shadow relative animate_ftb long">
+								<!--product preview-->
+								<a href="#" class="d_block relative wrapper pp_wrap">
+									<img src="images/product_img_3.jpg" class="tr_all_hover" alt="">
+									<span data-popup="#quick_view_product" class="box_s_none button_type_5 color_light r_corners tr_all_hover d_xs_none">Quick View</span>
+								</a>
+								<!--description and price of product-->
+								<figcaption>
+									<h5 class="m_bottom_10"><a href="#" class="color_dark">Cursus eleifend elit aenean aucto.</a></h5>
+									<div class="clearfix">
+										<p class="scheme_color f_left f_size_large m_bottom_15">RS 99.00</p>
+										
+									</div>
+									<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0">Add to Cart</button>
+								</figcaption>
+							</figure>
+						</div>
+						<!--product item-->
+						<div class="product_item specials">
+							<figure class="r_corners photoframe shadow relative animate_ftb long">
+								<!--product preview-->
+								<a href="#" class="d_block relative pp_wrap">
+									<!--sale product-->
+									<span class="hot_stripe"><img src="images/sale_product.png" alt=""></span>
+									<img src="images/product_img_4.jpg" class="tr_all_hover" alt="">
+									<span data-popup="#quick_view_product" class="box_s_none button_type_5 color_light r_corners tr_all_hover d_xs_none">Quick View</span>
+								</a>
+								<!--description and price of product-->
+								<figcaption>
+									<h5 class="m_bottom_10"><a href="#" class="color_dark">Aliquam erat volutpat</a></h5>
+									<div class="clearfix">
+										<p class="scheme_color f_left f_size_large m_bottom_15"><s>RS 79.00</s> RS 36.00</p>
+										
+									</div>
+									<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0">Add to Cart</button>
+								</figcaption>
+							</figure>
+						</div>
+						<!--product item-->
+						<div class="product_item">
+							<figure class="r_corners photoframe shadow relative hit animate_ftb long">
+								<!--product preview-->
+								<a href="#" class="d_block relative pp_wrap">
+									<!--hot product-->
+									<span class="hot_stripe"><img src="images/hot_product.png" alt=""></span>
+									<img src="images/product_img_1.jpg" class="tr_all_hover" alt="">
+									<span data-popup="#quick_view_product" class="button_type_5 box_s_none color_light r_corners tr_all_hover d_xs_none">Quick View</span>
+								</a>
+								<!--description and price of product-->
+								<figcaption>
+									<h5 class="m_bottom_10"><a href="#" class="color_dark">Eget elementum vel</a></h5>
+									<div class="clearfix">
+										<p class="scheme_color f_left f_size_large m_bottom_15">Rs 102.00</p>
+										
+									</div>
+									<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0">Add to Cart</button>
+								</figcaption>
+							</figure>
+						</div>
+						<!--product item-->
+						<div class="product_item featured">
+							<figure class="r_corners photoframe shadow relative animate_ftb long">
+								<!--product preview-->
+								<a href="#" class="d_block relative wrapper pp_wrap">
+									<img src="images/product_img_2.jpg" class="tr_all_hover" alt="">
+									<span data-popup="#quick_view_product" class="box_s_none button_type_5 color_light r_corners tr_all_hover d_xs_none">Quick View</span>
+								</a>
+								<!--description and price of product-->
+								<figcaption>
+									<h5 class="m_bottom_10"><a href="#" class="color_dark">Ut tellus dolor dapibus</a></h5>
+									<div class="clearfix m_bottom_15">
+										<p class="scheme_color f_size_large f_left">RS 57.00</p>
+										
+									</div>
+									<div class="clearfix">
+										<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light f_left mw_0">Add to Cart</button>
+										
+									</div>
+								</figcaption>
+							</figure>
+						</div>
+						<!--product item-->
+						<div class="product_item new">
+							<figure class="r_corners photoframe shadow relative animate_ftb long">
+								<!--product preview-->
+								<a href="#" class="d_block relative wrapper pp_wrap">
+									<img src="images/product_img_3.jpg" class="tr_all_hover" alt="">
+									<span data-popup="#quick_view_product" class="box_s_none button_type_5 color_light r_corners tr_all_hover d_xs_none">Quick View</span>
+								</a>
+								<!--description and price of product-->
+								<figcaption>
+									<h5 class="m_bottom_10"><a href="#" class="color_dark">Cursus eleifend elit aenean aucto.</a></h5>
+									<div class="clearfix">
+										<p class="scheme_color f_left f_size_large m_bottom_15">RS 99.00</p>
+										
+									</div>
+									<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0">Add to Cart</button>
+								</figcaption>
+							</figure>
+						</div>
+						<!--product item-->
+						<div class="product_item specials">
+							<figure class="r_corners photoframe shadow relative animate_ftb long">
+								<!--product preview-->
+								<a href="#" class="d_block relative pp_wrap">
+									<!--sale product-->
+									<span class="hot_stripe"><img src="images/sale_product.png" alt=""></span>
+									<img src="images/product_img_4.jpg" class="tr_all_hover" alt="">
+									<span data-popup="#quick_view_product" class="box_s_none button_type_5 color_light r_corners tr_all_hover d_xs_none">Quick View</span>
+								</a>
+								<!--description and price of product-->
+								<figcaption>
+									<h5 class="m_bottom_10"><a href="#" class="color_dark">Aliquam erat volutpat</a></h5>
+									<div class="clearfix">
+										<p class="scheme_color f_left f_size_large m_bottom_15"><s>RS 79.00</s> RS 36.00</p>
+										
+									</div>
+									<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0">Add to Cart</button>
+								</figcaption>
+							</figure>
+						</div>
 					</section>
 					<!--banners-->
 					<section class="row clearfix m_bottom_45 m_sm_bottom_35">

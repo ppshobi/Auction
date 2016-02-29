@@ -1,6 +1,6 @@
 <?php session_start();
 include_once("../includes/dbconn.php");
-include_once("../functions.php");
+
 include_once("adminfunctions.php");
 
 if(isadminloggedin()){
