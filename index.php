@@ -34,6 +34,33 @@ include_once("functions.php");
 			<![endif]-->
 			<!--markup header-->
 			<?php include_once("includes/header1.php");?>
+				<!--slider-->
+			<div class="camera_wrap m_bottom_0">
+				<div data-src="images/slide_02.jpg" data-custom-thumb="images/slide_02.jpg">
+					<div class="camera_caption_1 fadeFromTop t_align_c d_xs_none">
+						<div class="f_size_large color_light tt_uppercase slider_title_3 m_bottom_5">Meet New Theme</div>
+						<hr class="slider_divider d_inline_b m_bottom_5">
+						<div class="color_light slider_title tt_uppercase t_align_c m_bottom_45 m_sm_bottom_20"><b>Attractive &amp; Elegant<br>HTML Theme</b></div>
+						<div class="color_light slider_title_2 m_bottom_45">$<b>15.00</b></div>
+						<a href="#" role="button" class="tr_all_hover button_type_4 bg_scheme_color color_light r_corners tt_uppercase">Buy Now</a>
+					</div>
+				</div>
+    			<div data-src="images/slide_01.jpg" data-custom-thumb="images/slide_01.jpg">
+    				<div class="camera_caption_2 fadeIn t_align_c d_xs_none">
+						<div class="f_size_large tt_uppercase slider_title_3 scheme_color">New arrivals</div>
+						<hr class="slider_divider type_2 m_bottom_5 d_inline_b">
+						<div class="color_light slider_title tt_uppercase t_align_c m_bottom_65 m_sm_bottom_20"><b><span class="scheme_color">Spring/Summer 2014</span><br><span class="color_dark">Ready-To-Wear</span></b></div>
+						<a href="#" role="button" class="d_sm_inline_b button_type_4 bg_scheme_color color_light r_corners tt_uppercase tr_all_hover">View Collection</a>
+					</div>
+    			</div>
+    			<div data-src="images/slide_03.jpg" data-custom-thumb="images/slide_03.jpg">
+    				<div class="camera_caption_3 fadeFromTop t_align_c d_xs_none">
+						<img src="images/slider_layer_img.png" alt="" class="m_bottom_5">
+						<div class="color_light slider_title tt_uppercase t_align_c m_bottom_60 m_sm_bottom_20"><b class="color_dark">up to 70% off</b></div>
+						<a href="#" role="button" class="d_sm_inline_b button_type_4 bg_scheme_color color_light r_corners tt_uppercase tr_all_hover">Shop Now</a>
+					</div>
+    			</div>
+			</div>
 			<!--content-->
 			<div class="page_content_offset">
 				<div class="container">
@@ -68,6 +95,8 @@ include_once("functions.php");
 							$pic4=$row['pic4'];
 							$pic5=$row['pic5'];
 							$seller=$row['seller'];
+							$qty=$row['qty'];
+							$unit=$row['unit'];
 
 						echo "<div class=\"product_item\">";
 							echo "<figure class=\"r_corners photoframe shadow relative hit animate_ftb long\">";
@@ -94,7 +123,10 @@ include_once("functions.php");
 								echo "</figcaption>";
 							echo "</figure>";
 						echo "</div>";
-
+$sql2="SELECT * FROM users WHERE id=$seller";
+$result2=mysqlexec($sql);
+$row2=mysqli_fetch_assoc($result2);
+$sellername=$row2['name'];
 
 //quickview custom popup start
 						echo "<!--custom popup-->\n";
@@ -142,86 +174,42 @@ echo "						</div>\n";
 echo "						<!--right popup column-->\n";
 echo "						<div class=\"f_right half_column\">\n";
 echo "							<!--description-->\n";
-echo "							<h2 class=\"m_bottom_10\"><a href=\"#\" class=\"color_dark fw_medium\">Eget elementum vel</a></h2>\n";
+echo "							<h2 class=\"m_bottom_10\"><a href=\"#\" class=\"color_dark fw_medium\">". $name ."</a></h2>\n";
 echo "							<div class=\"m_bottom_10\">\n";
-echo "								<!--rating-->\n";
-echo "								<ul class=\"horizontal_list d_inline_middle type_2 clearfix rating_list tr_all_hover\">\n";
-echo "									<li class=\"active\">\n";
-echo "										<i class=\"fa fa-star-o empty tr_all_hover\"></i>\n";
-echo "										<i class=\"fa fa-star active tr_all_hover\"></i>\n";
-echo "									</li>\n";
-echo "									<li class=\"active\">\n";
-echo "										<i class=\"fa fa-star-o empty tr_all_hover\"></i>\n";
-echo "										<i class=\"fa fa-star active tr_all_hover\"></i>\n";
-echo "									</li>\n";
-echo "									<li class=\"active\">\n";
-echo "										<i class=\"fa fa-star-o empty tr_all_hover\"></i>\n";
-echo "										<i class=\"fa fa-star active tr_all_hover\"></i>\n";
-echo "									</li>\n";
-echo "									<li class=\"active\">\n";
-echo "										<i class=\"fa fa-star-o empty tr_all_hover\"></i>\n";
-echo "										<i class=\"fa fa-star active tr_all_hover\"></i>\n";
-echo "									</li>\n";
-echo "									<li>\n";
-echo "										<i class=\"fa fa-star-o empty tr_all_hover\"></i>\n";
-echo "										<i class=\"fa fa-star active tr_all_hover\"></i>\n";
-echo "									</li>\n";
-echo "								</ul>\n";
-echo "								<a href=\"#\" class=\"d_inline_middle default_t_color f_size_small m_left_5\">1 Review(s) </a>\n";
 echo "							</div>\n";
 echo "							<hr class=\"m_bottom_10 divider_type_3\">\n";
 echo "							<table class=\"description_table m_bottom_10\">\n";
 echo "								<tr>\n";
 echo "									<td>Manufacturer:</td>\n";
-echo "									<td><a href=\"#\" class=\"color_dark\">Chanel</a></td>\n";
+echo "									<td><a href=\"#\" class=\"color_dark\">".$sellername."</a></td>\n";
 echo "								</tr>\n";
 echo "								<tr>\n";
 echo "									<td>Availability:</td>\n";
-echo "									<td><span class=\"color_green\">in stock</span> 20 item(s)</td>\n";
+echo "									<td><span class=\"color_green\">".$qty . $unit."</td>\n";
 echo "								</tr>\n";
 echo "								<tr>\n";
 echo "									<td>Product Code:</td>\n";
-echo "									<td>PS06</td>\n";
+echo "									<td>".$prodid."</td>\n";
 echo "								</tr>\n";
-echo "							</table>\n";
-echo "							<h5 class=\"fw_medium m_bottom_10\">Product Dimensions and Weight</h5>\n";
-echo "							<table class=\"description_table m_bottom_5\">\n";
-echo "								<tr>\n";
-echo "									<td>Product Length:</td>\n";
-echo "									<td><span class=\"color_dark\">10.0000M</span></td>\n";
-echo "								</tr>\n";
-echo "								<tr>\n";
-echo "									<td>Product Weight:</td>\n";
-echo "									<td>10.0000KG</td>\n";
-echo "								</tr>\n";
-echo "							</table>\n";
+echo "							</table>\n";						
 echo "							<hr class=\"divider_type_3 m_bottom_10\">\n";
-echo "							<p class=\"m_bottom_10\">Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consecvtetuer adipiscing elit. </p>\n";
+echo "							<p class=\"m_bottom_10\">".$descr."</p>\n";
 echo "							<hr class=\"divider_type_3 m_bottom_15\">\n";
 echo "							<div class=\"m_bottom_15\">\n";
-echo "								<s class=\"v_align_b f_size_ex_large\">Rs 152.00</s><span class=\"v_align_b f_size_big m_left_5 scheme_color fw_medium\">Rs 102.00</span>\n";
+									if($offerprice<$price){
+										echo "<s class=\"v_align_b f_size_ex_large\">Rs ".$price."</s><span class=\"v_align_b f_size_big m_left_5 scheme_color fw_medium\">".$offerprice."</span>\n";
+									}else{
+										echo "<span class=\"v_align_b f_size_big m_left_5 scheme_color fw_medium\">Rs ".$price."</span>\n";
+									}
+
 echo "							</div>\n";
 echo "							<table class=\"description_table type_2 m_bottom_15\">\n";
-echo "								<tr>\n";
-echo "									<td class=\"v_align_m\">Size:</td>\n";
-echo "									<td class=\"v_align_m\">\n";
-echo "										<div class=\"custom_select f_size_medium relative d_inline_middle\">\n";
-echo "											<div class=\"select_title r_corners relative color_dark\">s</div>\n";
-echo "											<ul class=\"select_list d_none\"></ul>\n";
-echo "											<select name=\"product_name\">\n";
-echo "												<option value=\"s\">s</option>\n";
-echo "												<option value=\"m\">m</option>\n";
-echo "												<option value=\"l\">l</option>\n";
-echo "											</select>\n";
-echo "										</div>\n";
-echo "									</td>\n";
-echo "								</tr>\n";
 echo "								<tr>\n";
 echo "									<td class=\"v_align_m\">Quantity:</td>\n";
 echo "									<td class=\"v_align_m\">\n";
 echo "										<div class=\"clearfix quantity r_corners d_inline_middle f_size_medium color_dark\">\n";
 echo "											<button class=\"bg_tr d_block f_left\" data-direction=\"down\">-</button>\n";
-echo "											<input type=\"text\" name=\"\" readonly value=\"1\" class=\"f_left\">\n";
+echo "											<input type=\"text\" name=\"req_qty\" readonly value=\"1\" class=\"f_left\">\n";
 echo "											<button class=\"bg_tr d_block f_left\" data-direction=\"up\">+</button>\n";
 echo "										</div>\n";
 echo "									</td>\n";
@@ -229,9 +217,6 @@ echo "								</tr>\n";
 echo "							</table>\n";
 echo "							<div class=\"clearfix m_bottom_15\">\n";
 echo "								<button class=\"button_type_12 r_corners bg_scheme_color color_light tr_delay_hover f_left f_size_large\">Add to Cart</button>\n";
-echo "								<button class=\"button_type_12 bg_light_color_2 tr_delay_hover f_left r_corners color_dark m_left_5 p_hr_0\"><i class=\"fa fa-heart-o f_size_big\"></i><span class=\"tooltip tr_all_hover r_corners color_dark f_size_small\">Wishlist</span></button>\n";
-echo "								<button class=\"button_type_12 bg_light_color_2 tr_delay_hover f_left r_corners color_dark m_left_5 p_hr_0\"><i class=\"fa fa-files-o f_size_big\"></i><span class=\"tooltip tr_all_hover r_corners color_dark f_size_small\">Compare</span></button>\n";
-echo "								<button class=\"button_type_12 bg_light_color_2 tr_delay_hover f_left r_corners color_dark m_left_5 p_hr_0 relative\"><i class=\"fa fa-question-circle f_size_big\"></i><span class=\"tooltip tr_all_hover r_corners color_dark f_size_small\">Ask a Question</span></button>\n";
 echo "							</div>\n";
 echo "						</div>\n";
 echo "					</div>\n";
@@ -239,9 +224,7 @@ echo "				</div>\n";
 echo "			</section>\n";
 echo "		</div>\n";
 //custom pop upend
-						
-
-						}
+	}//end of whileloop
 						
 ?>
 						
