@@ -1,3 +1,3 @@
 <?php
-echo "<li data-src=\"products/". $seller . "/" . $prodid . "/" .$pic1 . "\">" . "<img src=\"products/". $seller . "/" . $prodid . "/" .$pic1 . "\"". "alt=\"\"></li>\n";
+echo "<img class=\"f_left m_right_10\" src=\"".$img."\""." alt=\"\">\n"; 
 ?>

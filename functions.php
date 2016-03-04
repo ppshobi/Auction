@@ -21,10 +21,30 @@ function mysqlexec($sql){
 
 }
 
+function addtocart($prodname,$prodid,$price,$qty,$img){
+	if(!isset($_SESSION['cart'])){
+		$_SESSION['cart']= array();
+		$_SESSION['totalcost']=0;
+	} 
+	$product = array('name'=>$prodname,'id' => $prodid,'price'=>$price,'qty'=>$qty,'img'=>$img);
+	if(array_push($_SESSION['cart'],$product)){
+		$_SESSION['totalcost']+=$price*$qty;
+		return true;
+	}else{
+		return false;
+	}
+	
+}
 
-function isloggedin(){
-	if(!isset($_SESSION['username'])){
- 		header("location:login.php");
+
+
+
+function isuserloggedin(){
+	if(isset($_SESSION['farmercart_user_id'])){
+ 		return true;
+	}
+	else{
+		return false;
 	}
 }
 

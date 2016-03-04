@@ -97,34 +97,37 @@ include_once("functions.php");
 							$seller=$row['seller'];
 							$qty=$row['qty'];
 							$unit=$row['unit'];
+							$imgpath="products/". $seller . "/" . $prodid . "/" .$pic1 . "\"";
 
 						echo "<div class=\"product_item\">";
 							echo "<figure class=\"r_corners photoframe shadow relative hit animate_ftb long\">";
 								echo "<!--product preview-->";
 								echo "<a href=\"#\" class=\"d_block relative pp_wrap\">";
 									
-									echo "<img src=\"products/". $seller . "/" . $prodid . "/" .$pic1 . "\"" . "class=\"tr_all_hover\" alt=\"\" width=\"230px\" height=\"230px\">";
-									echo "<span data-popup=\"#quick_view_product". $prodid. "\"" . "class=\"button_type_5 box_s_none color_light r_corners tr_all_hover d_xs_none\">Quick View</span>\"";
+									echo "<img src=\"$imgpath\"" . "class=\"tr_all_hover\" alt=\"\" width=\"230px\" height=\"230px\">";
+									echo "<span data-popup=\"#quick_view_product". $prodid. "\"" . "class=\"button_type_5 box_s_none color_light r_corners tr_all_hover d_xs_none\">Quick View</span>";
 								echo "</a>";
 								echo "<!--description and price of product-->";
 								echo "<figcaption>";
 									echo "<h5 class=\"m_bottom_10\"><a href=\"#\" class=\"color_dark\">". $name . "</a></h5>";
 									echo "<div class=\"clearfix\">";
 										echo "<p class=\"scheme_color f_left f_size_large m_bottom_15\">" ; if($offerprice<$price){
-												echo"<s>RS ". $price ."</s>";
-												echo " RS ". $offerprice ."</p>";
+												echo"<s>&#8377; ". $price ."</s>";
+												echo " &#8377; ". $offerprice ."</p>";
 											}else{
-												echo " RS ". $price ."</p>";
+												echo " &#8377; ". $price ."</p>";
 											}
 										
 										
 									echo "</div>";
-									echo "<button class=\"button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0\">Add to Cart</button>";
+									echo "<a href=\"#\">";
+									echo "<button class=\"button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0\">View Product</button>";
+									echo "</a>";
 								echo "</figcaption>";
 							echo "</figure>";
 						echo "</div>";
 $sql2="SELECT * FROM users WHERE id=$seller";
-$result2=mysqlexec($sql);
+$result2=mysqlexec($sql2);
 $row2=mysqli_fetch_assoc($result2);
 $sellername=$row2['name'];
 
@@ -185,7 +188,7 @@ echo "									<td><a href=\"#\" class=\"color_dark\">".$sellername."</a></td>\n
 echo "								</tr>\n";
 echo "								<tr>\n";
 echo "									<td>Availability:</td>\n";
-echo "									<td><span class=\"color_green\">".$qty . $unit."</td>\n";
+echo "									<td><span class=\"color_green\">".$qty . " " . $unit."</td>\n";
 echo "								</tr>\n";
 echo "								<tr>\n";
 echo "									<td>Product Code:</td>\n";
@@ -198,8 +201,10 @@ echo "							<hr class=\"divider_type_3 m_bottom_15\">\n";
 echo "							<div class=\"m_bottom_15\">\n";
 									if($offerprice<$price){
 										echo "<s class=\"v_align_b f_size_ex_large\">Rs ".$price."</s><span class=\"v_align_b f_size_big m_left_5 scheme_color fw_medium\">".$offerprice."</span>\n";
+										//To be used in the get request in addto cart
+										$price=$offerprice;
 									}else{
-										echo "<span class=\"v_align_b f_size_big m_left_5 scheme_color fw_medium\">Rs ".$price."</span>\n";
+										echo "<span class=\"v_align_b f_size_big m_left_5 scheme_color fw_medium\">&#8377; ".$price."</span>\n";
 									}
 
 echo "							</div>\n";
@@ -209,14 +214,19 @@ echo "									<td class=\"v_align_m\">Quantity:</td>\n";
 echo "									<td class=\"v_align_m\">\n";
 echo "										<div class=\"clearfix quantity r_corners d_inline_middle f_size_medium color_dark\">\n";
 echo "											<button class=\"bg_tr d_block f_left\" data-direction=\"down\">-</button>\n";
-echo "											<input type=\"text\" name=\"req_qty\" readonly value=\"1\" class=\"f_left\">\n";
+echo "											<input type=\"text\" id=\"req_qty\" name=\"req_qty\" readonly value=\"1\" class=\"f_left\">\n";
 echo "											<button class=\"bg_tr d_block f_left\" data-direction=\"up\">+</button>\n";
 echo "										</div>\n";
 echo "									</td>\n";
 echo "								</tr>\n";
 echo "							</table>\n";
 echo "							<div class=\"clearfix m_bottom_15\">\n";
-echo "								<button class=\"button_type_12 r_corners bg_scheme_color color_light tr_delay_hover f_left f_size_large\">Add to Cart</button>\n";
+?>
+
+<?php
+echo "<a id=\"cartlink\" href=\"cartadder.php?prodname={$name}&prodid={$prodid}&qty={$qty}&price={$price}&img={$imgpath}\">";
+echo "								<button class=\"button_type_12 r_corners bg_scheme_color color_light tr_delay_hover f_left f_size_large\" type=\"submit\">Add to Cart</button>\n";
+echo "</a>";
 echo "							</div>\n";
 echo "						</div>\n";
 echo "					</div>\n";

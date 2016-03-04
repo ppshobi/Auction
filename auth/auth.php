@@ -22,11 +22,8 @@ if($count==1){
 
 // Register $myusername, $mypassword and redirect to file "login_success.php"
 	$_SESSION['username']= $myusername;
-	$_SESSION['password']= $mypassword;
-	if($userlevel=='1')
-		header("location:../userhome.php?id={$row['id']}");
-	else
-		header("location:../admin.php");
+	$_SESSION['farmercart_user_id)']= $row['id'];
+		header("location:../index.php");
 }
 else {
 echo "Wrong Username or Password";
