@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0be0334f-1d82-4c12-a9a3-861d0604e611" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth/auth.php" afterPath="$PROJECT_DIR$/auth/auth.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout.php" afterPath="$PROJECT_DIR$/checkout.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="stmary's ecommerce.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,21 +26,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="checkout.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="checkout.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/checkout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47663552">
-              <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+            <state vertical-scroll-proportion="-88.42857">
+              <caret line="219" column="0" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
               <folding>
-                <element signature="n#style#0;n#iframe#0;n#div#0;n#li#0;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1457104665323" expanded="false" signature="1153:1188" placeholder="..." />
-                <marker date="1457104665323" expanded="true" signature="1189:1956" placeholder="..." />
-                <marker date="1457104665323" expanded="false" signature="1225:1238" placeholder="..." />
-                <marker date="1457104665323" expanded="false" signature="1294:1331" placeholder="..." />
-                <marker date="1457104665323" expanded="false" signature="1409:1438" placeholder="..." />
-                <marker date="1457104665323" expanded="false" signature="1454:1468" placeholder="..." />
-                <marker date="1457104665323" expanded="false" signature="1661:1682" placeholder="..." />
-                <marker date="1457104665323" expanded="false" signature="1898:1916" placeholder="..." />
+                <marker date="1457114201416" expanded="true" signature="1168:1203" placeholder="..." />
+                <marker date="1457114201416" expanded="true" signature="1204:1971" placeholder="..." />
+                <marker date="1457114201416" expanded="true" signature="1240:1253" placeholder="..." />
+                <marker date="1457114201416" expanded="true" signature="1309:1346" placeholder="..." />
+                <marker date="1457114201416" expanded="true" signature="1424:1453" placeholder="..." />
+                <marker date="1457114201416" expanded="true" signature="1469:1483" placeholder="..." />
+                <marker date="1457114201416" expanded="true" signature="1676:1697" placeholder="..." />
+                <marker date="1457114201416" expanded="true" signature="1913:1931" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -57,12 +57,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.642857">
-              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.3310811">
+              <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+              <folding>
+                <marker date="1457117934468" expanded="true" signature="1719:1850" placeholder="INSERT INTO ..." />
+                <marker date="1457117934468" expanded="true" signature="1982:2094" placeholder="SELECT AUTO_..TABLES..." />
+                <marker date="1457117934468" expanded="true" signature="2494:2603" placeholder="INSERT INTO ..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,8 +84,9 @@
         <option value="$PROJECT_DIR$/admin/editprod.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/includes/header1.php" />
-        <option value="$PROJECT_DIR$/checkout.php" />
         <option value="$PROJECT_DIR$/auth/auth.php" />
+        <option value="$PROJECT_DIR$/checkout.php" />
+        <option value="$PROJECT_DIR$/functions.php" />
       </list>
     </option>
   </component>
@@ -276,7 +281,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1830161" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -436,8 +441,33 @@
           <line>205</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/functions.php</url>
+          <line>93</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/functions.php</url>
+          <line>94</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/functions.php</url>
+          <line>96</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/functions.php</url>
+          <line>90</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/functions.php</url>
+          <line>89</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="65" />
+      <option name="time" value="72" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -447,15 +477,14 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#iframe#0;n#div#0;n#li#0;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1457104665323" expanded="false" signature="1153:1188" placeholder="..." />
-            <marker date="1457104665323" expanded="true" signature="1189:1956" placeholder="..." />
-            <marker date="1457104665323" expanded="false" signature="1225:1238" placeholder="..." />
-            <marker date="1457104665323" expanded="false" signature="1294:1331" placeholder="..." />
-            <marker date="1457104665323" expanded="false" signature="1409:1438" placeholder="..." />
-            <marker date="1457104665323" expanded="false" signature="1454:1468" placeholder="..." />
-            <marker date="1457104665323" expanded="false" signature="1661:1682" placeholder="..." />
-            <marker date="1457104665323" expanded="false" signature="1898:1916" placeholder="..." />
+            <marker date="1457114201416" expanded="true" signature="1168:1203" placeholder="..." />
+            <marker date="1457114201416" expanded="true" signature="1204:1971" placeholder="..." />
+            <marker date="1457114201416" expanded="true" signature="1240:1253" placeholder="..." />
+            <marker date="1457114201416" expanded="true" signature="1309:1346" placeholder="..." />
+            <marker date="1457114201416" expanded="true" signature="1424:1453" placeholder="..." />
+            <marker date="1457114201416" expanded="true" signature="1469:1483" placeholder="..." />
+            <marker date="1457114201416" expanded="true" signature="1676:1697" placeholder="..." />
+            <marker date="1457114201416" expanded="true" signature="1913:1931" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -665,14 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.642857">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/auth/auth.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.821428">
@@ -685,18 +706,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/checkout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47663552">
-          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+        <state vertical-scroll-proportion="-88.42857">
+          <caret line="219" column="0" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#iframe#0;n#div#0;n#li#0;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1457104665323" expanded="false" signature="1153:1188" placeholder="..." />
-            <marker date="1457104665323" expanded="true" signature="1189:1956" placeholder="..." />
-            <marker date="1457104665323" expanded="false" signature="1225:1238" placeholder="..." />
-            <marker date="1457104665323" expanded="false" signature="1294:1331" placeholder="..." />
-            <marker date="1457104665323" expanded="false" signature="1409:1438" placeholder="..." />
-            <marker date="1457104665323" expanded="false" signature="1454:1468" placeholder="..." />
-            <marker date="1457104665323" expanded="false" signature="1661:1682" placeholder="..." />
-            <marker date="1457104665323" expanded="false" signature="1898:1916" placeholder="..." />
+            <marker date="1457114201416" expanded="true" signature="1168:1203" placeholder="..." />
+            <marker date="1457114201416" expanded="true" signature="1204:1971" placeholder="..." />
+            <marker date="1457114201416" expanded="true" signature="1240:1253" placeholder="..." />
+            <marker date="1457114201416" expanded="true" signature="1309:1346" placeholder="..." />
+            <marker date="1457114201416" expanded="true" signature="1424:1453" placeholder="..." />
+            <marker date="1457114201416" expanded="true" signature="1469:1483" placeholder="..." />
+            <marker date="1457114201416" expanded="true" signature="1676:1697" placeholder="..." />
+            <marker date="1457114201416" expanded="true" signature="1913:1931" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3310811">
+          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding>
+            <marker date="1457117934468" expanded="true" signature="1719:1850" placeholder="INSERT INTO ..." />
+            <marker date="1457117934468" expanded="true" signature="1982:2094" placeholder="SELECT AUTO_..TABLES..." />
+            <marker date="1457117934468" expanded="true" signature="2494:2603" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
