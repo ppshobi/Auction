@@ -5,7 +5,7 @@ include_once("functions.php");
 $prodname=$_GET['prodname'];
 $prodid=$_GET['prodid'];
 $price=$_GET['price'];
-$qty=$_GET['qty'];
+$qty=$_GET['req_qty'];
 $img=$_GET['img'];
 
 if(addtocart($prodname,$prodid,$price,$qty,$img)){

@@ -120,7 +120,7 @@ include_once("functions.php");
 										
 										
 									echo "</div>";
-									echo "<a href=\"#\">";
+									echo "<a href=\"viewsingleproduct.php?prodid={$prodid}\">";
 									echo "<button class=\"button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0\">View Product</button>";
 									echo "</a>";
 								echo "</figcaption>";
@@ -222,11 +222,15 @@ echo "								</tr>\n";
 echo "							</table>\n";
 echo "							<div class=\"clearfix m_bottom_15\">\n";
 ?>
-
 <?php
-echo "<a id=\"cartlink\" href=\"cartadder.php?prodname={$name}&prodid={$prodid}&qty={$qty}&price={$price}&img={$imgpath}\">";
-echo "								<button class=\"button_type_12 r_corners bg_scheme_color color_light tr_delay_hover f_left f_size_large\" type=\"submit\">Add to Cart</button>\n";
-echo "</a>";
+echo "<form action=\"cartadder.php\" onsubmit=\"set_qty()\" method=\"get\">";
+echo "<input type=\"hidden\" id=\"sendreq\" name=\"req_qty\" value=\"\">";
+echo "<input type=\"hidden\" name=\"prodname\" value=\"".$name."\">";
+echo "<input type=\"hidden\" name=\"prodid\" value=\"".$prodid."\">";
+echo "<input type=\"hidden\" name=\"price\" value=\"".$price."\">";
+echo "<input type=\"hidden\" name=\"img\" value=\"".$imgpath."\">";
+echo "<button class=\"button_type_12 r_corners bg_scheme_color color_light tr_delay_hover f_left f_size_large\" type=\"submit\">Add to Cart</button>\n";
+echo "</form>";
 echo "							</div>\n";
 echo "						</div>\n";
 echo "					</div>\n";
@@ -237,7 +241,13 @@ echo "		</div>\n";
 	}//end of whileloop
 						
 ?>
-						
+<script type="text/javascript">
+
+function set_qty(){
+	var req=document.getElementById('req_qty').value;
+	document.getElementById('sendreq').value=req;
+}
+</script>						
 					</section>
 					<!--banners-->
 					<section class="row clearfix m_bottom_45 m_sm_bottom_35">
