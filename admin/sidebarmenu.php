@@ -18,6 +18,9 @@
                                         </li>
                                         <li><a href="viewproducts.php">View All Products</a>
                                         </li>
+                                        <li><a href="viewproducts.php">Orders</a>
+                                        </li>
+
                                         <li><a href="form.php">General Form</a>
                                         </li>
                                         <li><a href="form_advanced.php">Advanced Components</a>
@@ -29,6 +32,16 @@
                                         <li><a href="form_upload.php">Form Upload</a>
                                         </li>
                                         <li><a href="form_buttons.php">Form Buttons</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                 <li><a><i class="fa fa-edit"></i> Orders <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="vieworder.php">Order History</a>
+                                        </li>
+                                        <li><a href="orderyettoship.php">Orders Yet to Ship</a>
+                                        </li>
+                                        <li><a href="completedorder.php">Completed orders</a>
                                         </li>
                                     </ul>
                                 </li>

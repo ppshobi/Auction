@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("../functions.php");
+include_once("adminfunctions.php");
 include_once("../includes/dbconn.php");
 $sql="SELECT * FROM users WHERE userlevel=1";
 $result=mysqli_query($conn,$sql);
@@ -8,7 +8,7 @@ $row=mysqli_fetch_assoc($result);
 
 ?>
 <?php 
-isloggedin();
+isadminloggedin();
 
 ?>
 <!DOCTYPE html>

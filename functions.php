@@ -107,7 +107,9 @@ function placeorder(){
 				echo "<script>alert(\"Erroir When inserting to order details\")</script>";
 			}else{
 				echo "<script>alert(\"Your Order Placed Successfully\")</script>";
+
 				unset($_SESSION['cart']);
+				unset($_SESSION['totalcost']);
 			}
 		}
 	}

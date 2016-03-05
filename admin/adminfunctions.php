@@ -21,6 +21,17 @@ function mysqlexec($sql){
 
 }
 
+
+function shipped($orderid){
+	$sql="UPDATE orders SET orderstatus = 1, ordercompletiondate=CURDATE() WHERE orderid=$orderid";
+	$result=mysqlexec($sql);
+	if($result){
+		return true;
+	}else{
+		return false;
+	}
+}
+
 function addcat(){
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$cat=$_POST['catname'];
