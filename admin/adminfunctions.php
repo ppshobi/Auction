@@ -4,7 +4,7 @@ function mysqlexec($sql){
 	$host="localhost"; // Host name
 	$username="root"; // Mysql username
 	$password=""; // Mysql password
-	$db_name="farmercart"; // Database name
+	$db_name="auction"; // Database name
 
 // Connect to server and select databse.
 	$conn=mysqli_connect("$host", "$username", "$password")or die("cannot connect");
@@ -66,11 +66,9 @@ function addcat(){
 		$sql = "INSERT INTO category (id, cat, descr) VALUES ('', '$cat', '$descr')";
 		$result=mysqlexec($sql);
 		if ($result) {
-		  echo "Successfully Added Category";
-		  echo "<a href=\"addcat.php\">";
-		  echo "Add another category";
-		  echo "</a>";
-		} else {
+		  echo "<script>alert(\"Successfully Added Category\")</script>";
+		 
+} else {
 		  echo "Error: " . $sql . "<br>" . $result;
 		}
 
@@ -83,12 +81,14 @@ function updateproduct($prodid){
 		$descr=$_POST['descr'];
 		$cat=$_POST['cat'];
 		$price=$_POST['price'];
-		$offerprice=$_POST['offerprice'];
+		$minbid=$_POST['minbid'];
 		$unit=$_POST['unit'];
-		$qty=$_POST['qty'];
-		$visibility=$_POST['visibility'];		
+		$visibility=$_POST['visibility'];
+		$bidstartdate=$_POST['start'];
+		$bidenddate=$_POST['end'];
+				
 
-		$sql="UPDATE product SET name='$name', descr='$descr', category='$cat', price='$price', offerprice='$offerprice', qty='$qty', unit='$unit', visibility='$visibility' WHERE id=$prodid";
+		$sql="UPDATE product SET name='$name', descr='$descr', category='$cat', price='$price', minbid='$minbid', unit='$unit', visibility='$visibility',bidstartdate='$bidstartdate', bidenddate='$bidenddate' WHERE id=$prodid";
 
 		$result=mysqlexec($sql);
 		if ($result) {
@@ -109,12 +109,12 @@ function addprod(){
 		$name=$_POST['name'];
 		$descr=$_POST['descr'];
 		$cat=$_POST['cat'];
-		$price=$_POST['price'];
-		$offerprice=$_POST['offerprice'];
+		$minbid=$_POST['minbid'];
 		$unit=$_POST['unit'];
-		$qty=$_POST['qty'];
+		$start=$_POST['start'];
+		$end=$_POST['end'];
 		$visibility=$_POST['visibility'];
-		$seller=$_SESSION['farmercart_admin_id'];
+		$seller=$_SESSION['auction_admin_id'];
 
 		//photoupload function
 		// $verify[]=photoupload($seller);
@@ -125,7 +125,7 @@ function addprod(){
 		// $pic4=$verify[4];
 		// $pic5=$verify[5];
 //need to refactor this to a fucntion
-$sql="SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'farmercart' AND TABLE_NAME = 'product'";
+$sql="SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'auction' AND TABLE_NAME = 'product'";
 		$result=mysqlexec($sql);
 
 		$row=mysqli_fetch_array($result);
@@ -169,10 +169,18 @@ $sql="SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 
 
 
 		if($result){
-		$sql="INSERT INTO product (id, name, descr, category, price, offerprice, pic1, pic2, pic3, pic4, pic5, seller, qty, unit, visibility) VALUES ('', '$name', '$descr', '$cat', '$price', '$offerprice', '$pic1','$pic2', '$pic3','$pic4', '$pic5', '$seller', '$qty', '$unit', '$visibility')";
+		$sql="INSERT INTO product (id, name, descr, category, minbid, pic1, pic2, pic3, pic4, pic5, seller, unit, visibility,bidstartdate,bidenddate) VALUES ('', '$name', '$descr', '$cat', '$minbid', '$pic1','$pic2', '$pic3','$pic4', '$pic5', '$seller', '$unit', '$visibility','$start','$end')";
 
 		$result=mysqlexec($sql);
 		if ($result) {
+			$sql="SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'auction' AND TABLE_NAME = 'product'";
+			$result=mysqlexec($sql);
+
+			$row=mysqli_fetch_array($result);
+			//finding last inserted row id/product id
+			$lastid=$row[0]-1;
+			$sql="INSERT INTO biddetails (bidid,productid) VALUES('','$lastid')";
+			$result=mysqlexec($sql);
 			echo "<script>alert(\"Successfully Added the Product\")</script>";
 		}
 		else{
@@ -187,7 +195,7 @@ $sql="SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 
 }
 
 function photoupload($seller){
-		$sql="SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'farmercart' AND TABLE_NAME = 'product'";
+		$sql="SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'auction' AND TABLE_NAME = 'product'";
 		$result=mysqlexec($sql);
 
 		$row=mysqli_fetch_array($result);
@@ -230,7 +238,7 @@ function photoupload($seller){
 }
 
 function isadminloggedin(){
-	if(isset($_SESSION['farmercart_admin_id'])){
+	if(isset($_SESSION['auction_admin_id'])){
  		return true;
 	}
 	else{

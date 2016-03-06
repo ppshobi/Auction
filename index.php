@@ -87,17 +87,18 @@ include_once("functions.php");
 							$name=$row['name'];
 							$descr=$row['descr'];
 							$category=$row['category'];
-							$price=$row['price'];
-							$offerprice=$row['offerprice'];
+							$minbid=$row['minbid'];
 							$pic1=$row['pic1'];
 							$pic2=$row['pic2'];
 							$pic3=$row['pic3'];
 							$pic4=$row['pic4'];
 							$pic5=$row['pic5'];
 							$seller=$row['seller'];
-							$qty=$row['qty'];
+							$bidstartdate=$row['bidstartdate'];
+							$bidenddate=$row['bidenddate'];
 							$unit=$row['unit'];
 							$imgpath="products/". $seller . "/" . $prodid . "/" .$pic1 . "\"";
+							$yourbid=$minbid+1;
 
 						echo "<div class=\"product_item\">";
 							echo "<figure class=\"r_corners photoframe shadow relative hit animate_ftb long\">";
@@ -111,13 +112,9 @@ include_once("functions.php");
 								echo "<figcaption>";
 									echo "<h5 class=\"m_bottom_10\"><a href=\"#\" class=\"color_dark\">". $name . "</a></h5>";
 									echo "<div class=\"clearfix\">";
-										echo "<p class=\"scheme_color f_left f_size_large m_bottom_15\">" ; if($offerprice<$price){
-												echo"<s>&#8377; ". $price ."</s>";
-												echo " &#8377; ". $offerprice ."</p>";
-											}else{
-												echo " &#8377; ". $price ."</p>";
-											}
-										
+										echo "<p class=\"scheme_color f_left f_size_large m_bottom_15\">" ; 
+											
+												echo "Base Value &#8377; ". $minbid ."</p>";
 										
 									echo "</div>";
 									echo "<a href=\"viewsingleproduct.php?prodid={$prodid}\">";
@@ -183,13 +180,9 @@ echo "							</div>\n";
 echo "							<hr class=\"m_bottom_10 divider_type_3\">\n";
 echo "							<table class=\"description_table m_bottom_10\">\n";
 echo "								<tr>\n";
-echo "									<td>Manufacturer:</td>\n";
+echo "									<td>Sold By:</td>\n";
 echo "									<td><a href=\"#\" class=\"color_dark\">".$sellername."</a></td>\n";
-echo "								</tr>\n";
-echo "								<tr>\n";
-echo "									<td>Availability:</td>\n";
-echo "									<td><span class=\"color_green\">".$qty . " " . $unit."</td>\n";
-echo "								</tr>\n";
+echo "								</tr>\n";			
 echo "								<tr>\n";
 echo "									<td>Product Code:</td>\n";
 echo "									<td>".$prodid."</td>\n";
@@ -199,22 +192,16 @@ echo "							<hr class=\"divider_type_3 m_bottom_10\">\n";
 echo "							<p class=\"m_bottom_10\">".$descr."</p>\n";
 echo "							<hr class=\"divider_type_3 m_bottom_15\">\n";
 echo "							<div class=\"m_bottom_15\">\n";
-									if($offerprice<$price){
-										echo "<s class=\"v_align_b f_size_ex_large\">Rs ".$price."</s><span class=\"v_align_b f_size_big m_left_5 scheme_color fw_medium\">".$offerprice."</span>\n";
-										//To be used in the get request in addto cart
-										$price=$offerprice;
-									}else{
-										echo "<span class=\"v_align_b f_size_big m_left_5 scheme_color fw_medium\">&#8377; ".$price."</span>\n";
-									}
+							echo "<span class=\"v_align_b f_size_big m_left_5 scheme_color fw_medium\">Base Value &#8377; ".$minbid."</span>\n";
 
 echo "							</div>\n";
 echo "							<table class=\"description_table type_2 m_bottom_15\">\n";
 echo "								<tr>\n";
-echo "									<td class=\"v_align_m\">Quantity:</td>\n";
+echo "									<td class=\"v_align_m\">Your Bid:</td>\n";
 echo "									<td class=\"v_align_m\">\n";
 echo "										<div class=\"clearfix quantity r_corners d_inline_middle f_size_medium color_dark\">\n";
 echo "											<button class=\"bg_tr d_block f_left\" data-direction=\"down\">-</button>\n";
-echo "											<input type=\"text\" id=\"req_qty".$prodid."\" name=\"req_qty\" readonly value=\"1\" class=\"f_left\">\n";
+echo "<input type=\"text\" id=\"bid_amt".$prodid."\" name=\"req_qty\" value=\"".$yourbid."\" class=\"f_left\">\n";
 echo "											<button class=\"bg_tr d_block f_left\" data-direction=\"up\">+</button>\n";
 echo "										</div>\n";
 echo "									</td>\n";
@@ -223,13 +210,11 @@ echo "							</table>\n";
 echo "							<div class=\"clearfix m_bottom_15\">\n";
 ?>
 <?php
-echo "<form action=\"cartadder.php\" onsubmit=\"set_qty(".$prodid.")\" method=\"get\">";
-echo "<input type=\"hidden\" id=\"sendreq".$prodid."\" name=\"req_qty\" value=\"\">";
-echo "<input type=\"hidden\" name=\"prodname\" value=\"".$name."\">";
+echo "<form action=\"bidder.php\" onsubmit=\"set_qty(".$prodid.")\" method=\"get\">";
+echo "<input type=\"hidden\" id=\"sendbid".$prodid."\" name=\"sendbid\" value=\"\">";
+echo "<input type=\"hidden\" name=\"minbid\" value=\"".$minbid."\">";
 echo "<input type=\"hidden\" name=\"prodid\" value=\"".$prodid."\">";
-echo "<input type=\"hidden\" name=\"price\" value=\"".$price."\">";
-echo "<input type=\"hidden\" name=\"img\" value=\"".$imgpath."\">";
-echo "<button class=\"button_type_12 r_corners bg_scheme_color color_light tr_delay_hover f_left f_size_large\" type=\"submit\">Add to Cart</button>\n";
+echo "<button class=\"button_type_12 r_corners bg_scheme_color color_light tr_delay_hover f_left f_size_large\" type=\"submit\">Bid Now</button>\n";
 echo "</form>";
 echo "							</div>\n";
 echo "						</div>\n";
@@ -241,12 +226,7 @@ echo "		</div>\n";
 	}//end of while loop
 						
 ?>
-<script type="text/javascript">
-function set_qty(prodid){
-	var req=document.getElementById('req_qty'+prodid).value;
-	document.getElementById('sendreq'+prodid).value=req;
-}
-</script>				
+<script type="text/javascript" src="testscript.js"></script>>				
 					</section>
 					<!--banners-->
 					<section class="row clearfix m_bottom_45 m_sm_bottom_35">

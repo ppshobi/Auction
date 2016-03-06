@@ -9,7 +9,7 @@ if(isadminloggedin()){
 else{
     header("location:login.php");
 }
-$seller=$_SESSION['farmercart_admin_id'];
+$seller=$_SESSION['auction_admin_id'];
 ?>
 
 <?php

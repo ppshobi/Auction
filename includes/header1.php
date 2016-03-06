@@ -46,69 +46,7 @@
 									</ul>
 								</li>
 								<!--shopping cart-->
-								<li class="m_left_5 relative container3d" id="shopping_button">
-									<a role="button" href="#" class="button_type_3 color_light bg_scheme_color d_block r_corners tr_delay_hover box_s_none">
-										<span class="d_inline_middle shop_icon m_mxs_right_0">
-											<i class="fa fa-shopping-cart"></i>
-											<span class="count tr_delay_hover type_2 circle t_align_c">
-											<?php
-											if (isset($_SESSION['cart'])) {
-											echo count($_SESSION['cart']);										
-											}?>
-											</span>
-										</span>
-										<b class="d_mxs_none"><?php 
-										if (isset($_SESSION['cart'])) {
-											echo "&#8377;". $_SESSION['totalcost'];										
-											}?></b>
-									</a>
-									<div class="shopping_cart top_arrow tr_all_hover r_corners">
-										<div class="f_size_medium sc_header">Recently added item(s)</div>
-										<ul class="products_list">
-										<?php
-											
-											if (isset($_SESSION['cart'])){
-												$items=$_SESSION['cart'];
-												foreach($items as $key => $product){
-													$prodid=$product['id'];
-													$name=$product['name'];
-													$price=$product['price'];
-													$qty=$product['qty'];
-													$img=$product['img'];
-
-												 	echo "<li>\n"; 
-													echo " <div class=\"clearfix\">\n"; 
-													echo "	<!--product image-->\n"; 
-													echo "<img class=\"f_left m_right_10\" width=\"50px\" height=\"50px\" src=\"".$img."\""." alt=\"\">\n"; 
-													echo "			<!--product description-->\n"; 
-													echo "				<div class=\"f_left product_description\">\n"; 
-													echo "					<a href=\"#\" class=\"color_dark m_bottom_5 d_block\">".$name."</a>\n"; 
-													echo "						<span class=\"f_size_medium\">Product Code ".$prodid."</span>\n"; 
-													echo "				</div>\n"; 
-													echo "			<!--product price-->\n"; 
-													echo "				<div class=\"f_left f_size_medium\">\n"; 
-													echo "						<div class=\"clearfix\">\n"; 
-													echo $qty ." x <b class=\"color_dark\">&#8377;".$price." </b>\n"; 
-													echo "				 				</div>\n"; 
-													echo "	<button class=\"close_product color_dark tr_hover\"><i class=\"fa fa-times\"></i>Remove Item</button>\n"; 
-													echo "				</div>\n"; 
-													echo "	</div>\n"; 
-													echo "</li>\n";
-
-												}
-											}
-										?>
-										</ul>
-										<!--total price-->
-										<ul class="total_price bg_light_color_1 t_align_r color_dark">
-											<li>Total: <b class="f_size_large bold scheme_color sc_price t_align_l d_inline_b m_left_15"><?php if(isset($_SESSION['cart'])){echo "&#8377 ".$_SESSION['totalcost'];}?></b></li>
-										</ul>
-										<div class="sc_footer t_align_c">
-											<a href="#" role="button" class="button_type_4 d_inline_middle bg_light_color_2 r_corners color_dark t_align_c tr_all_hover m_mxs_bottom_5">View Cart</a>
-											<a href="checkout.php" role="button" class="button_type_4 bg_scheme_color d_inline_middle r_corners tr_all_hover color_light">Checkout</a>
-										</div>
-									</div>
-								</li>
+								
 							</ul>
 						</div>
 					</div>

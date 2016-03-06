@@ -12,7 +12,7 @@ else{
 
 
 
-$seller=$_SESSION['farmercart_admin_id'];
+$seller=$_SESSION['auction_admin_id'];
 $orderid=$_GET['orderid'];
 
 $result=shipped($orderid);

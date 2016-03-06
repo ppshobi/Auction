@@ -4,7 +4,7 @@ function mysqlexec($sql){
 	$host="localhost"; // Host name
 	$username="root"; // Mysql username
 	$password=""; // Mysql password
-	$db_name="farmercart"; // Database name
+	$db_name="auction"; // Database name
 
 // Connect to server and select databse.
 	$conn=mysqli_connect("$host", "$username", "$password")or die("cannot connect");
@@ -21,26 +21,21 @@ function mysqlexec($sql){
 
 }
 
-function addtocart($prodname,$prodid,$price,$qty,$img){
-	if(!isset($_SESSION['cart'])){
-		$_SESSION['cart']= array();
-		$_SESSION['totalcost']=0;
-	} 
-	$product = array('name'=>$prodname,'id' => $prodid,'price'=>$price,'qty'=>$qty,'img'=>$img);
-	if(array_push($_SESSION['cart'],$product)){
-		$_SESSION['totalcost']+=$price*$qty;
+function bidnow($prodid,$bid,$bidder){
+	$sql="UPDATE biddetails SET bid='$bid',bidder='$bidder' WHERE productid=$prodid";
+	$result=mysqlexec($sql);
+	if ($result) {
 		return true;
 	}else{
 		return false;
 	}
-	
 }
 
 
 
 
 function isuserloggedin(){
-	if(isset($_SESSION['farmercart_user_id'])){
+	if(isset($_SESSION['auction_user_id'])){
  		return true;
 	}
 	else{
@@ -52,7 +47,7 @@ function placeorder(){
 	if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 		if (isset($_GET['placeorder'])) {
 			$error=0;
-			$userid=$_SESSION['farmercart_user_id'];
+			$userid=$_SESSION['auction_user_id'];
 			//shipment details
 			$title=$_GET['title'];
 			$name=$_GET['name'];
@@ -71,7 +66,7 @@ function placeorder(){
 			$shipto.=$phone;
 
 			//user id
-			$userid=$_SESSION['farmercart_user_id'];
+			$userid=$_SESSION['auction_user_id'];
 			if(isset($_SESSION['totalcost'])){
 				$totalcost=$_SESSION['totalcost'];
 			}else{

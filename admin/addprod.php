@@ -9,7 +9,7 @@ if(isadminloggedin()){
 else{
     header("location:login.php");
 }
-$seller=$_SESSION['farmercart_admin_id'];
+$seller=$_SESSION['auction_admin_id'];
 ?>
 
 <?php
@@ -281,16 +281,9 @@ addprod($seller);
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Price <span class="required">*</span>
-                                            </label>
+                                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Minimum Bid</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="last-name" name="price" required="required" class="form-control col-md-7 col-xs-12">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Offer Price</label>
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="offerprice">
+                                                <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="minbid">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -298,6 +291,7 @@ addprod($seller);
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <select name="unit" id="unit" class="form-control" required>
                                                     <option value="">Choose..</option>
+                                                    <option value="Nos">Nos</option>
                                                     <option value="Kg">Kg</option>
                                                     <option value="Meter">Meter</option>
                                                     <option value="Litre">Litre</option>
@@ -305,9 +299,15 @@ addprod($seller);
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="qty" class="control-label col-md-3 col-sm-3 col-xs-12">Quantity</label>
+                                            <label for="qty" class="control-label col-md-3 col-sm-3 col-xs-12">Bid Start Date</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input id="qty" class="form-control col-md-7 col-xs-12" type="number" name="qty">
+                                                <input id="start" class="form-control col-md-7 col-xs-12" type="date" name="start">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="qty" class="control-label col-md-3 col-sm-3 col-xs-12">Bid End Date</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input id="end" class="form-control col-md-7 col-xs-12" type="date" name="end">
                                             </div>
                                         </div>
 

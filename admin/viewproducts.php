@@ -9,7 +9,7 @@ if(isadminloggedin()){
 else{
     header("location:login.php");
 }
-$seller=$_SESSION['farmercart_admin_id'];
+$seller=$_SESSION['auction_admin_id'];
 ?>
 
 <!DOCTYPE html>
@@ -154,7 +154,9 @@ $seller=$_SESSION['farmercart_admin_id'];
                                                 <th>ID</th>
                                                 <th>Title</th>
                                                 <th>Category</th>
-                                                <th>Balance Qty</th>
+                                                <th>Minimum Bid</th>
+                                                <th>Bid Start Date</th>
+                                                <th>Bid End Date</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -167,8 +169,10 @@ $seller=$_SESSION['farmercart_admin_id'];
                                                 while($row=mysqli_fetch_assoc($result)){
                                                     $id=$row['id'];
                                                     $name=$row['name'];
-                                                    $qty=$row['qty'];
+                                                    $minbid=$row['minbid'];
                                                     $catid=$row['category'];
+                                                    $bidstartdate=$row['bidstartdate'];
+                                                    $bidenddate=$row['bidenddate'];
                                                     //fetchin category from caegory table according to cat id
                                                     $sql2="SELECT * FROM category WHERE id = $catid";
                                                     $result2=mysqlexec($sql2);
@@ -179,7 +183,9 @@ $seller=$_SESSION['farmercart_admin_id'];
                                                         echo "<th scope=\"row\">". $id ."</th>";
                                                         echo "<td>" . $name . "</td>";
                                                         echo "<td>" . $row2['cat'] . "</td>";
-                                                        echo "<td>" . $qty . "</td>";
+                                                        echo "<td>" . $minbid . "</td>";
+                                                        echo "<td>" . $bidstartdate . "</td>";
+                                                        echo "<td>" . $bidenddate . "</td>";
                                                         echo "<td><a href=\"editprod.php?prodid={$id}\">" .  "Edit" .  "</a></td>";
                                                     echo "</tr>";
                                                 }

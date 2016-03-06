@@ -4,7 +4,7 @@
 $host="localhost"; // Host name 
 $username="root"; // Mysql username 
 $password=""; // Mysql password 
-$db_name="farmercart"; // Database name 
+$db_name="auction"; // Database name 
 
 // Connect to server and select databse.
 $conn=mysqli_connect("$host", "$username", "$password")or die("cannot connect"); 
