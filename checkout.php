@@ -90,9 +90,8 @@ echo "										</td>\n";
 echo "										<!--quanity-->\n"; 
 echo "										<td data-title=\"Quantity\">\n"; 
 echo "											<div class=\"clearfix quantity r_corners d_inline_middle f_size_medium color_dark m_bottom_10\">\n"; 
-echo "												<button class=\"bg_tr d_block f_left\" data-direction=\"down\">-</button>\n"; 
+
 echo "												<input type=\"text\" name=\"\" readonly value=\"".$qty."\" class=\"f_left\">\n"; 
-echo "												<button class=\"bg_tr d_block f_left\" data-direction=\"up\">+</button>\n"; 
 echo "											</div>\n"; 
 echo "											<div>\n"; 
 echo "												<a href=\"#\" class=\"color_dark\"><i class=\"fa fa-times f_size_medium m_right_5\"></i>Remove</a><br>\n"; 

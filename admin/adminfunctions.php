@@ -23,23 +23,26 @@ function mysqlexec($sql){
 
 
 function shipped($orderid){
+	$error=0;
 	$sql1="SELECT * FROM orderdetails WHERE orderid=$orderid";
 	$result=mysqlexec($sql1);
 	while($row=mysqli_fetch_assoc($result)){
 		$usedqty=$row['qty'];
 		$prodid=$row['productid'];
 		//getting already in qty in product
-		$sql5="SELECT * FROM products WHERE id=$prodid";
+		$sql5="SELECT * FROM product WHERE id=$prodid";
 		$result5=mysqlexec($sql5);
 		$row5=mysqli_fetch_assoc($result5);
 		$fullqty=$row5['qty'];
 		//calculating balacne qty ro update in product table
 		$balanceqty=$fullqty-$usedqty;
 		
-		$sql2="UPDATE products SET qty='$balanceqty' WHERE id=$prodid";
+		$sql2="UPDATE product SET qty='$balanceqty' WHERE id=$prodid";
 		$result2=mysqlexec($sql2);
 		if ($result2) {
 			//quantities are updated in the product table
+		}else{
+			$error=1;
 		}
 	}
 
@@ -47,6 +50,9 @@ function shipped($orderid){
 	$sql="UPDATE orders SET orderstatus = 1, ordercompletiondate=CURDATE() WHERE orderid=$orderid";
 	$result=mysqlexec($sql);
 	if($result){
+		if ($error==1) {
+			return false;
+		}
 		return true;
 	}else{
 		return false;

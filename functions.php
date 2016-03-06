@@ -72,7 +72,13 @@ function placeorder(){
 
 			//user id
 			$userid=$_SESSION['farmercart_user_id'];
-			$totalcost=$_SESSION['totalcost'];
+			if(isset($_SESSION['totalcost'])){
+				$totalcost=$_SESSION['totalcost'];
+			}else{
+				echo "<script>alert(\"Add some items to your cart\")";
+				echo "</script>";
+				header("location:index.php");
+			}
 			$sql="INSERT INTO orders (orderid,userid,totalcost,shipto,orderstatus,orderdate)VALUES('','$userid','$totalcost','$shipto','0',CURDATE())";
 			$result=mysqlexec($sql);
 			if ($result) {
@@ -82,7 +88,7 @@ function placeorder(){
 
 				$row=mysqli_fetch_array($result);
 				//finding last inserted order id
-				$orderid=$row[0];
+				$orderid=$row[0]-1;
 
 				//Getting product details from shopping cart session;
 				if (isset($_SESSION['cart'])) {

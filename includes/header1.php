@@ -11,10 +11,7 @@
 							</div>
 							<nav class="col-lg-4 col-md-4 col-sm-5 t_align_r t_xs_align_c">
 								<ul class="d_inline_b horizontal_list clearfix f_size_small users_nav">
-									<li><a href="#" class="default_t_color">My Account</a></li>
-									<li><a href="#" class="default_t_color">Orders List</a></li>
-									<li><a href="#" class="default_t_color">Wishlist</a></li>
-									<li><a href="#" class="default_t_color">Checkout</a></li>
+									<li><a href="checkout.php" class="default_t_color">Checkout</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -160,27 +157,7 @@
 										</div>
 										<img src="images/woman_image_1.jpg" class="d_sm_none f_right m_bottom_10" alt="">
 									</div>
-								</li>
-								<li class="relative current f_xs_none m_xs_bottom_5"><a href="category_grid.php" class="tr_delay_hover color_light tt_uppercase"><b>Pages</b></a>
-									<!--sub menu-->
-									<div class="sub_menu_wrap top_arrow d_xs_none type_2 tr_all_hover clearfix r_corners">
-										<ul class="sub_menu">
-											<li><a class="color_dark tr_delay_hover" href="category_grid.php">Grid View Category Page</a></li>
-											<li><a class="color_dark tr_delay_hover" href="category_list.php">List View Category Page</a></li>
-											<li><a class="color_dark tr_delay_hover" href="category_no_products.php">Category Page Without Products</a></li>
-											<li><a class="color_dark tr_delay_hover" href="product_page_sidebar.php">Product Page With Sidebar</a></li>
-											<li><a class="color_dark tr_delay_hover" href="full_width_product_page.php">Full Width Product Page</a></li>
-                                            <li><a class="color_dark tr_delay_hover" href="wishlist.php">Wishlist</a></li>
-											<li><a class="color_dark tr_delay_hover" href="compare_products.php">Compare Products</a></li>
-											<li><a class="color_dark tr_delay_hover" href="checkout.php">Checkout</a></li>
-											<li><a class="color_dark tr_delay_hover" href="manufacturers.php">Manufacturers</a></li>
-											<li><a class="color_dark tr_delay_hover" href="manufacturer_details.php">Manufacturer Page</a></li>
-											<li><a class="color_dark tr_delay_hover" href="orders_list.php">Orders List</a></li>
-											<li><a class="color_dark tr_delay_hover" href="order_details.php">Order Details</a></li>
-										</ul>
-									</div>
-								</li>
-								
+								</li>								
 							
 								<li class="relative f_xs_none m_xs_bottom_5"><a href="contact.php" class="tr_delay_hover color_light tt_uppercase"><b>Contact</b></a></li>
 							</ul>
