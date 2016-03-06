@@ -25,7 +25,7 @@ function mysqlexec($sql){
 function shipped($orderid){
 	$sql1="SELECT * FROM orderdetails WHERE orderid=$orderid";
 	$result=mysqlexec($sql1);
-	while($row=mysqli_fetch($result)){
+	while($row=mysqli_fetch_assoc($result)){
 		$usedqty=$row['qty'];
 		$prodid=$row['productid'];
 		//getting already in qty in product

@@ -214,7 +214,7 @@ echo "									<td class=\"v_align_m\">Quantity:</td>\n";
 echo "									<td class=\"v_align_m\">\n";
 echo "										<div class=\"clearfix quantity r_corners d_inline_middle f_size_medium color_dark\">\n";
 echo "											<button class=\"bg_tr d_block f_left\" data-direction=\"down\">-</button>\n";
-echo "											<input type=\"text\" id=\"req_qty\" name=\"req_qty\" readonly value=\"1\" class=\"f_left\">\n";
+echo "											<input type=\"text\" id=\"req_qty".$prodid."\" name=\"req_qty\" readonly value=\"1\" class=\"f_left\">\n";
 echo "											<button class=\"bg_tr d_block f_left\" data-direction=\"up\">+</button>\n";
 echo "										</div>\n";
 echo "									</td>\n";
@@ -223,8 +223,8 @@ echo "							</table>\n";
 echo "							<div class=\"clearfix m_bottom_15\">\n";
 ?>
 <?php
-echo "<form action=\"cartadder.php\" onsubmit=\"set_qty()\" method=\"get\">";
-echo "<input type=\"hidden\" id=\"sendreq\" name=\"req_qty\" value=\"\">";
+echo "<form action=\"cartadder.php\" onsubmit=\"set_qty(".$prodid.")\" method=\"get\">";
+echo "<input type=\"hidden\" id=\"sendreq".$prodid."\" name=\"req_qty\" value=\"\">";
 echo "<input type=\"hidden\" name=\"prodname\" value=\"".$name."\">";
 echo "<input type=\"hidden\" name=\"prodid\" value=\"".$prodid."\">";
 echo "<input type=\"hidden\" name=\"price\" value=\"".$price."\">";
@@ -238,16 +238,15 @@ echo "				</div>\n";
 echo "			</section>\n";
 echo "		</div>\n";
 //custom pop upend
-	}//end of whileloop
+	}//end of while loop
 						
 ?>
 <script type="text/javascript">
-
-function set_qty(){
-	var req=document.getElementById('req_qty').value;
-	document.getElementById('sendreq').value=req;
+function set_qty(prodid){
+	var req=document.getElementById('req_qty'+prodid).value;
+	document.getElementById('sendreq'+prodid).value=req;
 }
-</script>						
+</script>				
 					</section>
 					<!--banners-->
 					<section class="row clearfix m_bottom_45 m_sm_bottom_35">
