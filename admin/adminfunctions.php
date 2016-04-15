@@ -22,43 +22,6 @@ function mysqlexec($sql){
 }
 
 
-function shipped($orderid){
-	$error=0;
-	$sql1="SELECT * FROM orderdetails WHERE orderid=$orderid";
-	$result=mysqlexec($sql1);
-	while($row=mysqli_fetch_assoc($result)){
-		$usedqty=$row['qty'];
-		$prodid=$row['productid'];
-		//getting already in qty in product
-		$sql5="SELECT * FROM product WHERE id=$prodid";
-		$result5=mysqlexec($sql5);
-		$row5=mysqli_fetch_assoc($result5);
-		$fullqty=$row5['qty'];
-		//calculating balacne qty ro update in product table
-		$balanceqty=$fullqty-$usedqty;
-		
-		$sql2="UPDATE product SET qty='$balanceqty' WHERE id=$prodid";
-		$result2=mysqlexec($sql2);
-		if ($result2) {
-			//quantities are updated in the product table
-		}else{
-			$error=1;
-		}
-	}
-
-
-	$sql="UPDATE orders SET orderstatus = 1, ordercompletiondate=CURDATE() WHERE orderid=$orderid";
-	$result=mysqlexec($sql);
-	if($result){
-		if ($error==1) {
-			return false;
-		}
-		return true;
-	}else{
-		return false;
-	}
-}
-
 function addcat(){
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$cat=$_POST['catname'];
@@ -80,7 +43,6 @@ function updateproduct($prodid){
 		$name=$_POST['name'];
 		$descr=$_POST['descr'];
 		$cat=$_POST['cat'];
-		$price=$_POST['price'];
 		$minbid=$_POST['minbid'];
 		$unit=$_POST['unit'];
 		$visibility=$_POST['visibility'];
@@ -88,7 +50,7 @@ function updateproduct($prodid){
 		$bidenddate=$_POST['end'];
 				
 
-		$sql="UPDATE product SET name='$name', descr='$descr', category='$cat', price='$price', minbid='$minbid', unit='$unit', visibility='$visibility',bidstartdate='$bidstartdate', bidenddate='$bidenddate' WHERE id=$prodid";
+		$sql="UPDATE product SET name='$name', descr='$descr', category='$cat', minbid='$minbid', unit='$unit', visibility='$visibility',bidstartdate='$bidstartdate', bidenddate='$bidenddate' WHERE id=$prodid";
 
 		$result=mysqlexec($sql);
 		if ($result) {
@@ -237,12 +199,29 @@ function photoupload($seller){
 		
 }
 
-function isadminloggedin(){
+function isadmin(){
 	if(isset($_SESSION['auction_admin_id'])){
  		return true;
 	}
 	else{
 		return false;
 	}
+}
+
+function isloggedin(){
+	if(isset($_SESSION['auction_admin_id'])||isset($_SESSION['auction_user_id'])){
+ 		return true;
+	}
+	else{
+		return false;
+	}
+}
+function getuser(){
+if (isset($_SESSION['auction_admin_id'])) {
+	$bidder=$_SESSION['auction_admin_id'];
+	return $bidder;
+}else{
+	return false;
+}
 }
 ?>

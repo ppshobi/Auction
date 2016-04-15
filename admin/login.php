@@ -14,7 +14,7 @@ include_once("../includes/dbconn.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Farmer Cart Admin</title>
+    <title>Online Auction Admin</title>
 
     <!-- Bootstrap core CSS -->
 
@@ -52,7 +52,7 @@ include_once("../includes/dbconn.php");
             <div id="login" class="animate form">
                 <section class="login_content">
                     <form action="auth/auth.php" method="post" id="login_form">
-                        <h1>Login Form</h1>
+                        <h1>Admin Login</h1>
                         <div>
                             <input type="text" class="form-control" name ="username"placeholder="Username" required="" />
                         </div>
@@ -61,7 +61,7 @@ include_once("../includes/dbconn.php");
                         </div>
                         <div>
                             <a class="btn btn-default submit" href="javascript:{}" onclick="document.getElementById('login_form').submit(); return false;">Log in</a>
-                            <a class="reset_pass" href="#">Lost your password?</a>
+                            
                         </div>
                         <div class="clearfix"></div>
                         <div class="separator">
@@ -69,9 +69,9 @@ include_once("../includes/dbconn.php");
                            <div class="clearfix"></div>
                             <br />
                             <div>
-                                <h1><i class="fa fa-paw" style="font-size: 26px;"></i> Farmer Cart</h1>
+                                <h1><i class="fa fa-paw" style="font-size: 26px;"></i>Online Auction</h1>
 
-                                <p>©2016 All Rights Reserved. Farmer Cart. Privacy and Terms</p>
+                                <p>©2016 All Rights Reserved. Online Auction. Privacy and Terms</p>
                             </div>
                         </div>
                     </form>
@@ -106,7 +106,7 @@ include_once("../includes/dbconn.php");
                             <div>
                                 <h1><i class="fa fa-paw" style="font-size: 26px;"></i> Gentelella Alela!</h1>
 
-                                <p>©2015 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                                <p>©2015 All Rights Reserved. Online Auction</p>
                             </div>
                         </div>
                     </form>

@@ -2,7 +2,7 @@
 <!--[if IE 9 ]><html class="ie9" lang="en"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
 	<head>
-		<title>Farmercart - Contact</title>
+		<title>Online Auction - Contact</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<!--meta info-->
@@ -41,10 +41,10 @@
 				<div class="container">
 					<div class="row clearfix">
 						<!--left content column-->
-						<section class="col-lg-9 col-md-9 col-sm-9">
+						<section class="col-lg-12 col-md-12 col-sm-12">
 							<h2 class="tt_uppercase color_dark m_bottom_25">Contacts</h2>
 							<div class="r_corners photoframe map_container shadow m_bottom_45">
-								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12098.04228269596!2d-74.00499255597757!3d40.70677554722762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6!5e0!3m2!1sru!2s!4v1393474990482"></iframe>
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1002758.726129112!2d75.60512366884117!3d10.961387805127067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0812ffd49cf55b%3A0x64bd90fbed387c99!2sKerala!5e0!3m2!1sen!2sin!4v1457877629456"></iframe>
 							</div>
 							<div class="row clearfix">
 								<div class="col-lg-4 col-md-4 col-sm-4 m_xs_bottom_30">
@@ -108,271 +108,14 @@
 							</div>
 						</section>
 						<!--right column-->
-						<aside class="col-lg-3 col-md-3 col-sm-3">
-							<!--widgets-->
-							<figure class="widget shadow r_corners wrapper m_bottom_30">
-								<figcaption>
-									<h3 class="color_light">Categories</h3>
-								</figcaption>
-								<div class="widget_content">
-									<!--Categories list-->
-									<ul class="categories_list">
-										<li class="active">
-											<a href="#" class="f_size_large scheme_color d_block relative">
-												<b>Women</b>
-												<span class="bg_light_color_1 r_corners f_right color_dark talign_c"></span>
-											</a>
-											<!--second level-->
-											<ul>
-												<li class="active">
-													<a href="#" class="d_block f_size_large color_dark relative">
-														Dresses<span class="bg_light_color_1 r_corners f_right color_dark talign_c"></span>
-													</a>
-													<!--third level-->
-													<ul>
-														<li><a href="#" class="color_dark d_block">Evening Dresses</a></li>
-														<li><a href="#" class="color_dark d_block">Casual Dresses</a></li>
-														<li><a href="#" class="color_dark d_block">Party Dresses</a></li>
-													</ul>
-												</li>
-												<li>
-													<a href="#" class="d_block f_size_large color_dark relative">
-														Accessories<span class="bg_light_color_1 r_corners f_right color_dark talign_c"></span>
-													</a>
-												</li>
-												<li>
-													<a href="#" class="d_block f_size_large color_dark relative">
-														Tops<span class="bg_light_color_1 r_corners f_right color_dark talign_c"></span>
-													</a>
-												</li>
-											</ul>
-										</li>
-										<li>
-											<a href="#" class="f_size_large color_dark d_block relative">
-												<b>Men</b>
-												<span class="bg_light_color_1 r_corners f_right color_dark talign_c"></span>
-											</a>
-											<!--second level-->
-											<ul class="d_none">
-												<li>
-													<a href="#" class="d_block f_size_large color_dark relative">
-														Shorts<span class="bg_light_color_1 r_corners f_right color_dark talign_c"></span>
-													</a>
-													<!--third level-->
-													<ul class="d_none">
-														<li><a href="#" class="color_dark d_block">Evening</a></li>
-														<li><a href="#" class="color_dark d_block">Casual</a></li>
-														<li><a href="#" class="color_dark d_block">Party</a></li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-										<li>
-											<a href="#" class="f_size_large color_dark d_block relative">
-												<b>Kids</b>
-												<span class="bg_light_color_1 r_corners f_right color_dark talign_c"></span>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</figure>
-							<!--compare products-->
-							<figure class="widget shadow r_corners wrapper m_bottom_30">
-								<figcaption>
-									<h3 class="color_light">Compare Products</h3>
-								</figcaption>
-								<div class="widget_content">
-									You have no product to compare.
-								</div>
-							</figure>
-							<!--banner-->
-							<a href="#" class="d_block r_corners m_bottom_30">
-								<img src="images/banner_img_6.jpg" alt="">
-							</a>
-						</aside>
 					</div>
 				</div>
 			</div>
 			<!--markup footer-->
-			<footer id="footer">
-				<div class="footer_top_part">
-					<div class="container">
-						<div class="row clearfix">
-							<div class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_30">
-								<h3 class="color_light_2 m_bottom_20">About</h3>
-								<p class="m_bottom_25">Ut pharetra augue nec augue. Nam elit agna, endrerit sit amet, tincidunt ac, viverra sed, nulla. Donec porta diam eu massa. Quisque diam lorem, interdum vitae, dapibus ac, scelerisque.</p>
-								<!--social icons-->
-								<ul class="clearfix horizontal_list social_icons">
-									<li class="facebook m_bottom_5 relative">
-										<span class="tooltip tr_all_hover r_corners color_dark f_size_small">Facebook</span>
-										<a href="#" class="r_corners t_align_c tr_delay_hover f_size_ex_large">
-											<i class="fa fa-facebook"></i>
-										</a>
-									</li>
-									<li class="twitter m_left_5 m_bottom_5 relative">
-										<span class="tooltip tr_all_hover r_corners color_dark f_size_small">Twitter</span>
-										<a href="#" class="r_corners f_size_ex_large t_align_c tr_delay_hover">
-											<i class="fa fa-twitter"></i>
-										</a>
-									</li>
-									<li class="google_plus m_left_5 m_bottom_5 relative">
-										<span class="tooltip tr_all_hover r_corners color_dark f_size_small">Google Plus</span>
-										<a href="#" class="r_corners f_size_ex_large t_align_c tr_delay_hover">
-											<i class="fa fa-google-plus"></i>
-										</a>
-									</li>
-									<li class="rss m_left_5 m_bottom_5 relative">
-										<span class="tooltip tr_all_hover r_corners color_dark f_size_small">Rss</span>
-										<a href="#" class="r_corners f_size_ex_large t_align_c tr_delay_hover">
-											<i class="fa fa-rss"></i>
-										</a>
-									</li>
-									<li class="pinterest m_left_5 m_bottom_5 relative">
-										<span class="tooltip tr_all_hover r_corners color_dark f_size_small">Pinterest</span>
-										<a href="#" class="r_corners f_size_ex_large t_align_c tr_delay_hover">
-											<i class="fa fa-pinterest"></i>
-										</a>
-									</li>
-									<li class="instagram m_left_5 m_bottom_5 relative">
-										<span class="tooltip tr_all_hover r_corners color_dark f_size_small">Instagram</span>
-										<a href="#" class="r_corners f_size_ex_large t_align_c tr_delay_hover">
-											<i class="fa fa-instagram"></i>
-										</a>
-									</li>
-									<li class="linkedin m_bottom_5 m_sm_left_5 relative">
-										<span class="tooltip tr_all_hover r_corners color_dark f_size_small">LinkedIn</span>
-										<a href="#" class="r_corners f_size_ex_large t_align_c tr_delay_hover">
-											<i class="fa fa-linkedin"></i>
-										</a>
-									</li>
-									<li class="vimeo m_left_5 m_bottom_5 relative">
-										<span class="tooltip tr_all_hover r_corners color_dark f_size_small">Vimeo</span>
-										<a href="#" class="r_corners f_size_ex_large t_align_c tr_delay_hover">
-											<i class="fa fa-vimeo-square"></i>
-										</a>
-									</li>
-									<li class="youtube m_left_5 m_bottom_5 relative">
-										<span class="tooltip tr_all_hover r_corners color_dark f_size_small">Youtube</span>
-										<a href="#" class="r_corners f_size_ex_large t_align_c tr_delay_hover">
-											<i class="fa fa-youtube-play"></i>
-										</a>
-									</li>
-									<li class="flickr m_left_5 m_bottom_5 relative">
-										<span class="tooltip tr_all_hover r_corners color_dark f_size_small">Flickr</span>
-										<a href="#" class="r_corners f_size_ex_large t_align_c tr_delay_hover">
-											<i class="fa fa-flickr"></i>
-										</a>
-									</li>
-									<li class="envelope m_left_5 m_bottom_5 relative">
-										<span class="tooltip tr_all_hover r_corners color_dark f_size_small">Contact Us</span>
-										<a href="#" class="r_corners f_size_ex_large t_align_c tr_delay_hover">
-											<i class="fa fa-envelope-o"></i>
-										</a>
-									</li>
-								</ul>
-							</div>
-							<div class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_30">
-								<h3 class="color_light_2 m_bottom_20">The Service</h3>
-								<ul class="vertical_list">
-									<li><a class="color_light tr_delay_hover" href="#">My account<i class="fa fa-angle-right"></i></a></li>
-									<li><a class="color_light tr_delay_hover" href="#">Order history<i class="fa fa-angle-right"></i></a></li>
-									<li><a class="color_light tr_delay_hover" href="#">Wishlist<i class="fa fa-angle-right"></i></a></li>
-									<li><a class="color_light tr_delay_hover" href="#">Vendor contact<i class="fa fa-angle-right"></i></a></li>
-									<li><a class="color_light tr_delay_hover" href="#">Front page<i class="fa fa-angle-right"></i></a></li>
-									<li><a class="color_light tr_delay_hover" href="#">Virtuemart categories<i class="fa fa-angle-right"></i></a></li>
-								</ul>
-							</div>
-							<div class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_30">
-								<h3 class="color_light_2 m_bottom_20">Information</h3>
-								<ul class="vertical_list">
-									<li><a class="color_light tr_delay_hover" href="#">About us<i class="fa fa-angle-right"></i></a></li>
-									<li><a class="color_light tr_delay_hover" href="#">New collection<i class="fa fa-angle-right"></i></a></li>
-									<li><a class="color_light tr_delay_hover" href="#">Best sellers<i class="fa fa-angle-right"></i></a></li>
-									<li><a class="color_light tr_delay_hover" href="#">Manufacturers<i class="fa fa-angle-right"></i></a></li>
-									<li><a class="color_light tr_delay_hover" href="#">Privacy policy<i class="fa fa-angle-right"></i></a></li>
-									<li><a class="color_light tr_delay_hover" href="#">Terms &amp; condition<i class="fa fa-angle-right"></i></a></li>
-								</ul>
-							</div>
-							<div class="col-lg-3 col-md-3 col-sm-3">
-								<h3 class="color_light_2 m_bottom_20">Newsletter</h3>
-								<p class="f_size_medium m_bottom_15">Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
-								<form id="newsletter">
-									<input type="email" placeholder="Your email address" class="m_bottom_20 r_corners f_size_medium full_width" name="newsletter-email">
-									<button type="submit" class="button_type_8 r_corners bg_scheme_color color_light tr_all_hover">Subscribe</button>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!--copyright part-->
-				<div class="footer_bottom_part">
-					<div class="container clearfix t_mxs_align_c">
-						<p class="f_left f_mxs_none m_mxs_bottom_10">&copy; 2014 <span class="color_light">Farmercart</span>. All Rights Reserved.</p>
-						<ul class="f_right horizontal_list clearfix f_mxs_none d_mxs_inline_b">
-							<li><img src="images/payment_img_1.png" alt=""></li>
-							<li class="m_left_5"><img src="images/payment_img_2.png" alt=""></li>
-							<li class="m_left_5"><img src="images/payment_img_3.png" alt=""></li>
-							<li class="m_left_5"><img src="images/payment_img_4.png" alt=""></li>
-							<li class="m_left_5"><img src="images/payment_img_5.png" alt=""></li>
-						</ul>
-					</div>
-				</div>
-			</footer>
+			<?php include_once("footer.php");?>
 		</div>
 		<!--social widgets-->
-		<ul class="social_widgets d_xs_none">
-			<!--facebook-->
-			<li class="relative">
-				<button class="sw_button t_align_c facebook"><i class="fa fa-facebook"></i></button>
-				<div class="sw_content">
-					<h3 class="color_dark m_bottom_20">Join Us on Facebook</h3>
-					<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fenvato&amp;width=235&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false&amp;appId=438889712801266" style="border:none; overflow:hidden; width:235px; height:258px;"></iframe>
-				</div>
-			</li>
-			<!--twitter feed-->
-			<li class="relative">
-				<button class="sw_button t_align_c twitter"><i class="fa fa-twitter"></i></button>
-				<div class="sw_content">
-					<h3 class="color_dark m_bottom_20">Latest Tweets</h3>
-					<div class="twitterfeed m_bottom_25"></div>
-					<a role="button" class="button_type_4 d_inline_b r_corners tr_all_hover color_light tw_color" href="https://twitter.com/fanfbmltemplate">Follow on Twitter</a>
-				</div>	
-			</li>
-			<!--contact info-->
-			<li class="relative">
-				<button class="sw_button t_align_c googlemap"><i class="fa fa-map-marker"></i></button>
-				<div class="sw_content">
-					<h3 class="color_dark m_bottom_20">Store Location</h3>
-					<ul class="c_info_list">
-						<li class="m_bottom_10">
-							<div class="clearfix m_bottom_15">
-								<i class="fa fa-map-marker f_left color_dark"></i>
-								<p class="contact_e">8901 Marmora Road,<br> Glasgow, D04 89GR.</p>
-							</div>
-							<iframe class="r_corners full_width" id="gmap_mini" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=ru&amp;geocode=&amp;q=Manhattan,+New+York,+NY,+United+States&amp;aq=0&amp;oq=monheten&amp;sll=37.0625,-95.677068&amp;sspn=65.430355,129.814453&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=%D0%9C%D0%B0%D0%BD%D1%85%D1%8D%D1%82%D1%82%D0%B5%D0%BD,+%D0%9D%D1%8C%D1%8E-%D0%99%D0%BE%D1%80%D0%BA,+%D0%9D%D1%8C%D1%8E+%D0%99%D0%BE%D1%80%D0%BA,+%D0%9D%D1%8C%D1%8E-%D0%99%D0%BE%D1%80%D0%BA&amp;ll=40.790278,-73.959722&amp;spn=0.015612,0.031693&amp;z=13&amp;output=embed"></iframe>
-						</li>
-						<li class="m_bottom_10">
-							<div class="clearfix m_bottom_10">
-								<i class="fa fa-phone f_left color_dark"></i>
-								<p class="contact_e">800-559-65-80</p>
-							</div>
-						</li>
-						<li class="m_bottom_10">
-							<div class="clearfix m_bottom_10">
-								<i class="fa fa-envelope f_left color_dark"></i>
-								<a class="contact_e default_t_color" href="mailto:#">info@companyname.com</a>
-							</div>
-						</li>
-						<li>
-							<div class="clearfix">
-								<i class="fa fa-clock-o f_left color_dark"></i>
-								<p class="contact_e">Monday - Friday: 08.00-20.00 <br>Saturday: 09.00-15.00<br> Sunday: closed</p>
-							</div>
-						</li>
-					</ul>
-				</div>	
-			</li>
-		</ul>
+
 		<!--custom popup-->
 		<div class="popup_wrap d_none" id="quick_view_product">
 			<section class="popup r_corners shadow">
@@ -535,10 +278,7 @@
 						</li>
 						<li class="clearfix m_bottom_30">
 							<button class="button_type_4 tr_all_hover r_corners f_left bg_scheme_color color_light f_mxs_none m_mxs_bottom_15">Log In</button>
-							<div class="f_right f_size_medium f_mxs_none">
-								<a href="#" class="color_dark">Forgot your password?</a><br>
-								<a href="#" class="color_dark">Forgot your username?</a>
-							</div>
+							
 						</li>
 					</ul>
 				</form>

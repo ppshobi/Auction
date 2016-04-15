@@ -1,5 +1,33 @@
 <?php
 
+function registration() {
+	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+		$name = $_POST['name'];
+		$email = $_POST['email'];
+		$username = $_POST['username'];
+		$phone = $_POST['phone'];
+		$password = $_POST['password'];
+		$address = $_POST['address'];
+
+		$sql = "INSERT INTO users(id, username, password, email, userlevel, name, pic, phone,address) VALUES ('', '$username', '$password', '$email', '3', '$name', '', '$phone','$address')";
+		$result = mysqlexec($sql);
+		if($result) {
+			echo "<script>alert(\"Successfully registered\")</script>";
+		} else{
+			echo "<script>alert(\"Error while registering\")</script>";
+		}
+	}
+}
+
+function getuser(){
+if (isset($_SESSION['auction_user_id'])) {
+	$bidder=$_SESSION['auction_user_id'];
+	return $bidder;
+}else{
+	return false;
+}
+}
+
 function mysqlexec($sql){
 	$host="localhost"; // Host name
 	$username="root"; // Mysql username
@@ -25,13 +53,29 @@ function bidnow($prodid,$bid,$bidder){
 	$sql="UPDATE biddetails SET bid='$bid',bidder='$bidder' WHERE productid=$prodid";
 	$result=mysqlexec($sql);
 	if ($result) {
-		return true;
+		$sql2="INSERT INTO bidparticipation(id,productid,userid) VALUES('','$prodid','$bidder')";
+		$result2=mysqlexec($sql2);
+		if($result2){
+			//GENERate Message for other participated users
+			$msg="A user Raised Bid amount By &#8377; " .$bid. "<a href=\"../viewsingleproduct.php?prodid={$prodid}\">"." for the product with Product id". $prodid ."</a> Please Rise your bid ASAP";
+
+			$sql3="SELECT * FROM bidparticipation WHERE productid=$prodid";
+			$result3=mysqlexec($sql3);
+			while($row3=mysqli_fetch_assoc($result3)){
+				$msgto=$row3['userid'];
+				$sql4="INSERT INTO messages(msgid,msgto,msg)VALUES('','$msgto','$msg')";
+				$result4=mysqlexec($sql4);
+			}
+			return true;
+		}else{
+			return false;
+		}
 	}else{
 		return false;
 	}
+
+
 }
-
-
 
 
 function isuserloggedin(){
@@ -43,79 +87,6 @@ function isuserloggedin(){
 	}
 }
 
-function placeorder(){
-	if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-		if (isset($_GET['placeorder'])) {
-			$error=0;
-			$userid=$_SESSION['auction_user_id'];
-			//shipment details
-			$title=$_GET['title'];
-			$name=$_GET['name'];
-			$addr=$_GET['addr1'] . "<br/>" . $_GET['addr2'];
-			$pin=$_GET['pin'];
-			$city=$_GET['city'];
-			$country=$_GET['country'];
-			$state=$_GET['state'];
-			$phone=$_GET['phone'];
-			//building shipto address from the get values
-			$shipto= $title . "." .$name . "<br/>";
-			$shipto.=$addr . "<br/>";
-			$shipto.=$city . " " .$state . "<br/>";
-			$shipto.=$country . "<br/>";
-			$shipto.=$pin . "<br/>";
-			$shipto.=$phone;
-
-			//user id
-			$userid=$_SESSION['auction_user_id'];
-			if(isset($_SESSION['totalcost'])){
-				$totalcost=$_SESSION['totalcost'];
-			}else{
-				echo "<script>alert(\"Add some items to your cart\")";
-				echo "</script>";
-				header("location:index.php");
-			}
-			$sql="INSERT INTO orders (orderid,userid,totalcost,shipto,orderstatus,orderdate)VALUES('','$userid','$totalcost','$shipto','0',CURDATE())";
-			$result=mysqlexec($sql);
-			if ($result) {
-				//inserted details to order table then insert to order details table
-				$sql="SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'farmercart' AND TABLE_NAME = 'orders'";
-				$result=mysqlexec($sql);
-
-				$row=mysqli_fetch_array($result);
-				//finding last inserted order id
-				$orderid=$row[0]-1;
-
-				//Getting product details from shopping cart session;
-				if (isset($_SESSION['cart'])) {
-					$items=$_SESSION['cart'];
-					foreach($items as $key => $product){
-						$prodid=$product['id'];
-						$price=$product['price'];
-						$qty=$product['qty'];
-					$sql2="INSERT INTO orderdetails(detailid,orderid,productid,price,qty)VALUES('','$orderid','$prodid','$price','$qty')";
-					$result2=mysqlexec($sql2);
-					if (!$result2) {
-						$error=1;
-						break;
-					}
-					
-					}// end of for each loop
-
-				}
-			}
-		
-			if ($error==1) {
-				echo "<script>alert(\"Erroir When inserting to order details\")</script>";
-			}else{
-				echo "<script>alert(\"Your Order Placed Successfully\")</script>";
-
-				unset($_SESSION['cart']);
-				unset($_SESSION['totalcost']);
-			}
-		}
-	}
-
-}//end of placeorder function
 
 
 ?>

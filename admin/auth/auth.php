@@ -18,16 +18,22 @@ $result=mysqli_query($conn,$sql);
 $count=mysqli_num_rows($result);
 $row=mysqli_fetch_assoc($result);
 $id=$row['id'];
+$userlevel=$row['userlevel'];
 // If result matched $myusername and $mypassword, table row must be 1 row
 if($count==1){
 
 // Register $myusername, $mypassword and redirect to file "login_success.php"
 	$_SESSION['username']= $myusername;
-	$_SESSION['auction_admin_id']=$id;
 	
+	if($userlevel==1){
+		$_SESSION['auction_admin_id']=$id;
 		header("location:../index.php");
+	}else{
+		echo "Restricted area for sellers";
+	}
 }
 else {
 echo "Wrong Username or Password";
 }
+
 ?>

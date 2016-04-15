@@ -8,22 +8,27 @@ $usercount=mysqli_num_rows($result);
 $sql="SELECT * FROM product";
 $result=mysqlexec($sql);
 $productcount=mysqli_num_rows($result);
-$sql="SELECT * FROM orders";
+$sql="SELECT * FROM bidparticipation";
 $result=mysqlexec($sql);
 $ordercount=mysqli_num_rows($result);
-$sql="SELECT * FROM orders WHERE orderstatus='1'";
-$result=mysqlexec($sql);
-$shippedcount=mysqli_num_rows($result);
 
 
 ?>
 <?php 
-if(isadminloggedin()){
+if(isloggedin()){
     //do nothing stay here
 }
 else{
     header("location:login.php");
 }
+
+
+if(isadmin()){
+    $seller=$_SESSION['auction_admin_id'];
+}else{
+    header("location:login.php");
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -80,20 +85,12 @@ else{
                 <div class="left_col scroll-view">
 
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href="index.php" class="site_title"><i class="fa fa-paw"></i> <span>Farmer Cart Admin</span></a>
+                        <a href="index.php" class="site_title"><i class="fa fa-paw"></i> <span>Online Auction</span></a>
                     </div>
                     <div class="clearfix"></div>
 
                     <!-- menu prile quick info -->
-                    <div class="profile">
-                        <div class="profile_pic">
-                            <img src="images/img.jpg" alt="..." class="img-circle profile_img">
-                        </div>
-                        <div class="profile_info">
-                            <span>Welcome,</span>
-                            <h2>Admin</h2>
-                        </div>
-                    </div>
+                     <?php include_once("menuprofile.php");?>
                     <!-- /menu prile quick info -->
 
                     <br />
@@ -163,14 +160,7 @@ else{
                             <div class="count green"><?php echo $ordercount;?></div>
                         </div>
                     </div>
-                    <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
-                        <div class="left"></div>
-                        <div class="right">
-                            <span class="count_top"><i class="fa fa-user"></i> Total Shipped</span>
-                            <div class="count"><?php echo $shippedcount;?></div>
-                            
-                        </div>
-                    </div>
+                   
 
                 </div>
                 <!-- /top tiles -->

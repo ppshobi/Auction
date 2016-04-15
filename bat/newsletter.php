@@ -4,11 +4,11 @@
 $to = '';
 
 /* Subject */
-$subject = 'Farmercart Newsletter Form';
+$subject = 'Online Auction Newsletter Form';
 
 /* Headers */
-// $headers = 'From: Farmercart' . "\r\n" .
-//     'Reply-To: Farmercart@Farmercart.com' . "\r\n" .
+// $headers = 'From: Online Auction' . "\r\n" .
+//     'Reply-To: Online Auction@Online Auction.com' . "\r\n" .
 //     'X-Mailer: PHP/' . phpversion();
 
 $email = $_POST['newsletter-email'];

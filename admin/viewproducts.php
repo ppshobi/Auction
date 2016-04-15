@@ -3,13 +3,22 @@ include_once("../includes/dbconn.php");
 include_once("adminfunctions.php");
 
 
-if(isadminloggedin()){
+if(isloggedin()){
     //do nothing stay here
 }
 else{
     header("location:login.php");
 }
-$seller=$_SESSION['auction_admin_id'];
+
+
+if(isadmin()){
+    $seller=$_SESSION['auction_admin_id'];
+}else{
+    $seller=$_SESSION['auction_user_id'];
+}
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +31,7 @@ $seller=$_SESSION['auction_admin_id'];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentallela Alela! | </title>
+    <title>Online Auction </title>
 
     <!-- Bootstrap core CSS -->
 
@@ -62,7 +71,7 @@ $seller=$_SESSION['auction_admin_id'];
                 <div class="left_col scroll-view">
 
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href="index.php" class="site_title"><i class="fa fa-paw"></i> <span>Farmer Cart Admin</span></a>
+                        <a href="index.php" class="site_title"><i class="fa fa-paw"></i> <span>Online Auction</span></a>
                     </div>
                     <div class="clearfix"></div>
 
@@ -163,7 +172,13 @@ $seller=$_SESSION['auction_admin_id'];
                                         <tbody>
                                             <?php
                                             //grab the product details from produc table
-                                            $sql="SELECT * FROM product";
+                                            $sql='';
+                                            if(isadmin()){
+                                                $sql="SELECT * FROM product";
+                                            }else{
+                                                $sql="SELECT * FROM product WHERE seller=$seller";
+                                            }
+                                            
                                             $result=mysqlexec($sql);
                                             if ($result) {
                                                 while($row=mysqli_fetch_assoc($result)){

@@ -2,13 +2,18 @@
 include_once("../includes/dbconn.php");
 include_once("adminfunctions.php");
 
-if(isadminloggedin()){
+if(isloggedin()){
     //do nothing stay here
 }
 else{
     header("location:login.php");
 }
-$seller=$_SESSION['auction_admin_id'];
+if (isset($_SESSION['auction_admin_id'])) {
+    $seller=$_SESSION['auction_admin_id'];
+}else{
+     header("location:login.php");
+}
+
 $prodid=$_GET['prodid'];
 ?>
 <?php 
@@ -22,10 +27,10 @@ updateproduct($prodid);
 $name='';
 $descr='';
 $cat='';
-$price='';
-$offerprice='';
+$minbid='';
 $unit='';
-$qty='';
+$bidstartdate='';
+$bidenddate='';
 $visibility='';
 
 $sql= "SELECT * FROM product WHERE id = $prodid";
@@ -35,10 +40,10 @@ if($result){
     $name=$row['name'];
     $descr=$row['descr'];
     $catid=$row['category'];
-    $price=$row['price'];
-    $offerprice=$row['offerprice'];
+    $minbid=$row['minbid'];
     $unit=$row['unit'];
-    $qty=$row['qty'];
+    $bidstartdate=$row['bidstartdate'];
+    $bidenddate=$row['bidenddate'];
     $visibility=$row['visibility'];
 }
 
@@ -55,7 +60,7 @@ if($result){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>FarmerCart Admin</title>
+    <title>Online Auction Admin</title>
 
     <!-- Bootstrap core CSS -->
 
@@ -102,21 +107,13 @@ if($result){
                 <div class="left_col scroll-view">
 
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href="index.php" class="site_title"><i class="fa fa-paw"></i> <span>Farmer Cart Admin</span></a>
+                        <a href="index.php" class="site_title"><i class="fa fa-paw"></i> <span>Online Auction</span></a>
                     </div>
                     <div class="clearfix"></div>
 
 
                     <!-- menu prile quick info -->
-                    <div class="profile">
-                        <div class="profile_pic">
-                            <img src="images/img.jpg" alt="..." class="img-circle profile_img">
-                        </div>
-                        <div class="profile_info">
-                            <span>Welcome,</span>
-                            <h2>Anthony Fernando</h2>
-                        </div>
-                    </div>
+                    <?php include_once("menuprofile.php");?>
                     <!-- /menu prile quick info -->
 
                     <br />
@@ -217,18 +214,13 @@ if($result){
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Price <span class="required">*</span>
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Minimum Bid <span class="required">*</span>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" value="<?php echo $price; ?>" id="last-name" name="price" required="required" class="form-control col-md-7 col-xs-12">
+                                                <input type="text" value="<?php echo $minbid; ?>" id="last-name" name="minbid" required="required" class="form-control col-md-7 col-xs-12">
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Offer Price</label>
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input id="middle-name" value="<?php echo $offerprice; ?>" class="form-control col-md-7 col-xs-12" type="text" name="offerprice">
-                                            </div>
-                                        </div>
+                                       
                                         <div class="form-group">
                                          <label for="unit" class="control-label col-md-3 col-sm-3 col-xs-12">Unit *:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -237,13 +229,20 @@ if($result){
                                                     <option value="Kg">Kg</option>
                                                     <option value="Meter">Meter</option>
                                                     <option value="Litre">Litre</option>
+                                                    <option value="Litre">Nos</option>
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="qty" class="control-label col-md-3 col-sm-3 col-xs-12">Quantity</label>
+                                         <div class="form-group">
+                                            <label for="qty" class="control-label col-md-3 col-sm-3 col-xs-12">Bid Start Date</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input id="qty" value="<?php echo $qty; ?>"class="form-control col-md-7 col-xs-12" type="number" name="qty">
+                                                <input id="start" class="form-control col-md-7 col-xs-12" value="<?php echo $bidstartdate;?>" type="date" name="start">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="qty" class="control-label col-md-3 col-sm-3 col-xs-12">Bid End Date</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input id="end" class="form-control col-md-7 col-xs-12" value="<?php echo $bidenddate;?>"type="date" name="end">
                                             </div>
                                         </div>
 

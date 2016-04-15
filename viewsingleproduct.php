@@ -7,7 +7,7 @@ include_once("functions.php");
 <!--[if IE 9 ]><html class="ie9" lang="en"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
 	<head>
-		<title>Farmercart - Product Page </title>
+		<title>Online Auction - Product Page </title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<!--meta info-->
@@ -44,15 +44,16 @@ include_once("functions.php");
 				$name=$row['name'];
 				$descr=$row['descr'];
 				$category=$row['category'];
-				$price=$row['price'];
-				$offerprice=$row['offerprice'];
+				$baseval=$row['minbid'];
 				$pic1=$row['pic1'];
 				$pic2=$row['pic2'];
 				$pic3=$row['pic3'];
 				$pic4=$row['pic4'];
 				$pic5=$row['pic5'];
 				$seller=$row['seller'];
-				$qty=$row['qty'];
+				$bidstartdate=$row['bidstartdate'];
+				$bidenddate=$row['bidenddate'];
+				
 				$unit=$row['unit'];
 				$imgpath="products/". $seller . "/" . $prodid . "/" ;
 
@@ -61,6 +62,22 @@ include_once("functions.php");
 				$row1=mysqli_fetch_assoc($result1);
 
 				$sellername = $row1['name'];
+
+$sql3="SELECT * FROM biddetails WHERE productid = $prodid";
+$result3=mysqlexec($sql3);
+$row3=mysqli_fetch_assoc($result3);
+$highbid=$row3['bid'];
+$highbidby=$row3['bidder'];
+$sql4="SELECT name FROM users WHERE id=$highbidby";
+$result4=mysqlexec($sql4);
+$highbidbyname='';
+if ($result4) {
+	$row4=mysqli_fetch_assoc($result4);
+	$highbidbyname=$row4['name'];
+}
+
+$yourbid=$highbid+1;
+$minbid=$highbid;
 			?>
 			<!-- End Getting product info -->
 			<!--content-->
@@ -101,62 +118,53 @@ include_once("functions.php");
 							<hr class="m_bottom_10 divider_type_3">
 							<table class="description_table m_bottom_10">
 								<tr>
-									<td>Manufacturer:</td>
+									<td>Sold By:</td>
 									<td><a href="#" class="color_dark"><?php echo $sellername; ?></a></td>
-								</tr>
-								<tr>
-									<td>Availability:</td>
-									<td><span class="color_green">in stock</span> <?php echo " " . $qty . " " . $unit; ?></td>
 								</tr>
 								<tr>
 									<td>Product Code:</td>
 									<td><?php echo $prodid; ?></td>
 								</tr>
+								<tr>
+									<td>Auction Started : </td>
+									<td><?php echo $bidstartdate;?></td>
+								</tr>
+								<tr>
+									<td>Auction Ends On:</td>
+									<td><?php echo $bidenddate;?>."</td>
+								</tr>
 							</table>
 							<hr class="divider_type_3 m_bottom_10">
 							<p class="m_bottom_10"><?php echo $descr; ?></p>
 							<hr class="divider_type_3 m_bottom_15">
-							<?php
-								if($offerprice<$price){
-									echo "<s class=\"v_align_b f_size_ex_large\">Rs ".$price."</s><span class=\"v_align_b f_size_big m_left_5 scheme_color fw_medium\">".$offerprice."</span>\n";
-									//To be used in the get request in addto cart
-									$price=$offerprice;
-								}else{
-									echo "<span class=\"v_align_b f_size_big m_left_5 scheme_color fw_medium\">&#8377; ".$price."</span>\n";
-								}
-							?>
+							<?php echo "<span class=\"v_align_b f_size_big m_left_5 scheme_color fw_medium\">Base Value &#8377; ".$baseval."</span>\n";?>
 							<table class="description_table type_2 m_bottom_15">
 								
 								<tr>
-									<td class="v_align_m">Quantity:</td>
-									<td class="v_align_m">
-										<div class="clearfix quantity r_corners d_inline_middle f_size_medium color_dark">
-											<button class="bg_tr d_block f_left" data-direction="down">-</button>
-											<input type="text" id="req_qty" readonly value="1" class="f_left">
-											<button class="bg_tr d_block f_left" data-direction="up">+</button>
-										</div>
-									</td>
-								</tr>
-							</table>
-							<?php
-							echo "<form action=\"cartadder.php\" onsubmit=\"set_qty()\" method=\"get\">";
-echo "<input type=\"hidden\" id=\"sendreq\" name=\"req_qty\" value=\"\">";
-echo "<input type=\"hidden\" name=\"prodname\" value=\"".$name."\">";
+									<td class="v_align_m">Your Bid:</td>
+									<?php
+									echo "									<td class=\"v_align_m\">\n";
+echo "										<div class=\"clearfix quantity r_corners d_inline_middle f_size_medium color_dark\">\n";
+echo "											<button class=\"bg_tr d_block f_left\" data-direction=\"down\">-</button>\n";
+echo "<input type=\"text\" id=\"bid_amt".$prodid."\" name=\"req_qty\" value=\"".$yourbid."\" class=\"f_left\">\n";
+echo "											<button class=\"bg_tr d_block f_left\" data-direction=\"up\">+</button>\n";
+echo "										</div>\n";
+echo "									</td>\n";
+echo"								</tr>";
+echo"						</table>";
+echo "<form action=\"bidder.php\" onsubmit=\"set_bid(".$prodid.")\" method=\"get\">";
+echo "<input type=\"hidden\" id=\"sendbid".$prodid."\" name=\"sendbid\" value=\"\">";
+echo "<input type=\"hidden\" name=\"minbid\" value=\"".$minbid."\">";
 echo "<input type=\"hidden\" name=\"prodid\" value=\"".$prodid."\">";
-echo "<input type=\"hidden\" name=\"price\" value=\"".$price."\">";
-echo "<input type=\"hidden\" name=\"img\" value=\"".$imgpath."\">";
-
-							echo "<div class=\"d_ib_offset_0 m_bottom_20\">";
-							echo "<button class=\"button_type_12 r_corners bg_scheme_color color_light tr_delay_hover d_inline_b f_size_large\">Add to Cart</button>";
-							echo "</div>";
+echo "<button class=\"button_type_12 r_corners bg_scheme_color color_light tr_delay_hover f_left f_size_large\" type=\"submit\">Bid Now</button>\n";
 echo "</form>";
 ?>
-<script type="text/javascript">
 
-function set_qty(){
-	var req=document.getElementById('req_qty').value;
-	document.getElementById('sendreq').value=req;
-}
+<script type="text/javascript">
+	function set_bid(prodid){
+	var req=document.getElementById('bid_amt'+prodid).value;
+	document.getElementById('sendbid'+prodid).value=req;
+}	
 </script>
 							<p class="d_inline_middle">Share this:</p>
 							<div class="d_inline_middle m_left_5 addthis_widget_container">
@@ -179,199 +187,8 @@ function set_qty(){
 				</div>
 			</div>
 			<!--markup footer-->
-			<footer id="footer">
-				<div class="footer_top_part">
-					<div class="container">
-						<div class="row clearfix">
-							<div class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_30">
-								<h3 class="color_light_2 m_bottom_20">About</h3>
-								<p class="m_bottom_25">Ut pharetra augue nec augue. Nam elit agna, endrerit sit amet, tincidunt ac, viverra sed, nulla. Donec porta diam eu massa. Quisque diam lorem, interdum vitae, dapibus ac, scelerisque.</p>
-								<!--social icons-->
-								<ul class="clearfix horizontal_list social_icons">
-									<li class="facebook m_bottom_5 relative">
-										<span class="tooltip tr_all_hover r_corners color_dark f_size_small">Facebook</span>
-										<a href="#" class="r_corners t_align_c tr_delay_hover f_size_ex_large">
-											<i class="fa fa-facebook"></i>
-										</a>
-									</li>
-									<li class="twitter m_left_5 m_bottom_5 relative">
-										<span class="tooltip tr_all_hover r_corners color_dark f_size_small">Twitter</span>
-										<a href="#" class="r_corners f_size_ex_large t_align_c tr_delay_hover">
-											<i class="fa fa-twitter"></i>
-										</a>
-									</li>
-									<li class="google_plus m_left_5 m_bottom_5 relative">
-										<span class="tooltip tr_all_hover r_corners color_dark f_size_small">Google Plus</span>
-										<a href="#" class="r_corners f_size_ex_large t_align_c tr_delay_hover">
-											<i class="fa fa-google-plus"></i>
-										</a>
-									</li>
-									<li class="rss m_left_5 m_bottom_5 relative">
-										<span class="tooltip tr_all_hover r_corners color_dark f_size_small">Rss</span>
-										<a href="#" class="r_corners f_size_ex_large t_align_c tr_delay_hover">
-											<i class="fa fa-rss"></i>
-										</a>
-									</li>
-									<li class="pinterest m_left_5 m_bottom_5 relative">
-										<span class="tooltip tr_all_hover r_corners color_dark f_size_small">Pinterest</span>
-										<a href="#" class="r_corners f_size_ex_large t_align_c tr_delay_hover">
-											<i class="fa fa-pinterest"></i>
-										</a>
-									</li>
-									<li class="instagram m_left_5 m_bottom_5 relative">
-										<span class="tooltip tr_all_hover r_corners color_dark f_size_small">Instagram</span>
-										<a href="#" class="r_corners f_size_ex_large t_align_c tr_delay_hover">
-											<i class="fa fa-instagram"></i>
-										</a>
-									</li>
-									<li class="linkedin m_bottom_5 m_sm_left_5 relative">
-										<span class="tooltip tr_all_hover r_corners color_dark f_size_small">LinkedIn</span>
-										<a href="#" class="r_corners f_size_ex_large t_align_c tr_delay_hover">
-											<i class="fa fa-linkedin"></i>
-										</a>
-									</li>
-									<li class="vimeo m_left_5 m_bottom_5 relative">
-										<span class="tooltip tr_all_hover r_corners color_dark f_size_small">Vimeo</span>
-										<a href="#" class="r_corners f_size_ex_large t_align_c tr_delay_hover">
-											<i class="fa fa-vimeo-square"></i>
-										</a>
-									</li>
-									<li class="youtube m_left_5 m_bottom_5 relative">
-										<span class="tooltip tr_all_hover r_corners color_dark f_size_small">Youtube</span>
-										<a href="#" class="r_corners f_size_ex_large t_align_c tr_delay_hover">
-											<i class="fa fa-youtube-play"></i>
-										</a>
-									</li>
-									<li class="flickr m_left_5 m_bottom_5 relative">
-										<span class="tooltip tr_all_hover r_corners color_dark f_size_small">Flickr</span>
-										<a href="#" class="r_corners f_size_ex_large t_align_c tr_delay_hover">
-											<i class="fa fa-flickr"></i>
-										</a>
-									</li>
-									<li class="envelope m_left_5 m_bottom_5 relative">
-										<span class="tooltip tr_all_hover r_corners color_dark f_size_small">Contact Us</span>
-										<a href="#" class="r_corners f_size_ex_large t_align_c tr_delay_hover">
-											<i class="fa fa-envelope-o"></i>
-										</a>
-									</li>
-								</ul>
-							</div>
-							<div class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_30">
-								<h3 class="color_light_2 m_bottom_20">The Service</h3>
-								<ul class="vertical_list">
-									<li><a class="color_light tr_delay_hover" href="#">My account<i class="fa fa-angle-right"></i></a></li>
-									<li><a class="color_light tr_delay_hover" href="#">Order history<i class="fa fa-angle-right"></i></a></li>
-									<li><a class="color_light tr_delay_hover" href="#">Wishlist<i class="fa fa-angle-right"></i></a></li>
-									<li><a class="color_light tr_delay_hover" href="#">Vendor contact<i class="fa fa-angle-right"></i></a></li>
-									<li><a class="color_light tr_delay_hover" href="#">Front page<i class="fa fa-angle-right"></i></a></li>
-									<li><a class="color_light tr_delay_hover" href="#">Virtuemart categories<i class="fa fa-angle-right"></i></a></li>
-								</ul>
-							</div>
-							<div class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_30">
-								<h3 class="color_light_2 m_bottom_20">Information</h3>
-								<ul class="vertical_list">
-									<li><a class="color_light tr_delay_hover" href="#">About us<i class="fa fa-angle-right"></i></a></li>
-									<li><a class="color_light tr_delay_hover" href="#">New collection<i class="fa fa-angle-right"></i></a></li>
-									<li><a class="color_light tr_delay_hover" href="#">Best sellers<i class="fa fa-angle-right"></i></a></li>
-									<li><a class="color_light tr_delay_hover" href="#">Manufacturers<i class="fa fa-angle-right"></i></a></li>
-									<li><a class="color_light tr_delay_hover" href="#">Privacy policy<i class="fa fa-angle-right"></i></a></li>
-									<li><a class="color_light tr_delay_hover" href="#">Terms &amp; condition<i class="fa fa-angle-right"></i></a></li>
-								</ul>
-							</div>
-							<div class="col-lg-3 col-md-3 col-sm-3">
-								<h3 class="color_light_2 m_bottom_20">Newsletter</h3>
-								<p class="f_size_medium m_bottom_15">Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
-								<form id="newsletter">
-									<input type="email" placeholder="Your email address" class="m_bottom_20 r_corners f_size_medium full_width" name="newsletter-email">
-									<button type="submit" class="button_type_8 r_corners bg_scheme_color color_light tr_all_hover">Subscribe</button>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!--copyright part-->
-				<div class="footer_bottom_part">
-					<div class="container clearfix t_mxs_align_c">
-						<p class="f_left f_mxs_none m_mxs_bottom_10">&copy; 2014 <span class="color_light">Flatastic</span>. All Rights Reserved.</p>
-						<ul class="f_right horizontal_list clearfix f_mxs_none d_mxs_inline_b">
-							<li><img src="images/payment_img_1.png" alt=""></li>
-							<li class="m_left_5"><img src="images/payment_img_2.png" alt=""></li>
-							<li class="m_left_5"><img src="images/payment_img_3.png" alt=""></li>
-							<li class="m_left_5"><img src="images/payment_img_4.png" alt=""></li>
-							<li class="m_left_5"><img src="images/payment_img_5.png" alt=""></li>
-						</ul>
-					</div>
-				</div>
-			</footer>
+			<?php include_once("footer.php");?>
 		</div>
-		<!--social widgets-->
-		<ul class="social_widgets d_xs_none">
-			<!--facebook-->
-			<li class="relative">
-				<button class="sw_button t_align_c facebook"><i class="fa fa-facebook"></i></button>
-				<div class="sw_content">
-					<h3 class="color_dark m_bottom_20">Join Us on Facebook</h3>
-					<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fenvato&amp;width=235&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false&amp;appId=438889712801266" style="border:none; overflow:hidden; width:235px; height:258px;"></iframe>
-				</div>
-			</li>
-			<!--twitter feed-->
-			<li class="relative">
-				<button class="sw_button t_align_c twitter"><i class="fa fa-twitter"></i></button>
-				<div class="sw_content">
-					<h3 class="color_dark m_bottom_20">Latest Tweets</h3>
-					<div class="twitterfeed m_bottom_25"></div>
-					<a role="button" class="button_type_4 d_inline_b r_corners tr_all_hover color_light tw_color" href="https://twitter.com/fanfbmltemplate">Follow on Twitter</a>
-				</div>	
-			</li>
-			<!--contact form-->
-			<li class="relative">
-				<button class="sw_button t_align_c contact"><i class="fa fa-envelope-o"></i></button>
-				<div class="sw_content">
-					<h3 class="color_dark m_bottom_20">Contact Us</h3>
-					<p class="f_size_medium m_bottom_15">Lorem ipsum dolor sit amet, consectetuer adipis mauris</p>
-					<form id="contactform" class="mini">
-						<input class="f_size_medium m_bottom_10 r_corners full_width" type="text" name="cf_name" placeholder="Your name">
-						<input class="f_size_medium m_bottom_10 r_corners full_width" type="email" name="cf_email" placeholder="Email">
-						<textarea class="f_size_medium r_corners full_width m_bottom_20" placeholder="Message" name="cf_message"></textarea>
-						<button type="submit" class="button_type_4 r_corners mw_0 tr_all_hover color_dark bg_light_color_2">Send</button>
-					</form>
-				</div>	
-			</li>
-			<!--contact info-->
-			<li class="relative">
-				<button class="sw_button t_align_c googlemap"><i class="fa fa-map-marker"></i></button>
-				<div class="sw_content">
-					<h3 class="color_dark m_bottom_20">Store Location</h3>
-					<ul class="c_info_list">
-						<li class="m_bottom_10">
-							<div class="clearfix m_bottom_15">
-								<i class="fa fa-map-marker f_left color_dark"></i>
-								<p class="contact_e">8901 Marmora Road,<br> Glasgow, D04 89GR.</p>
-							</div>
-							<iframe class="r_corners full_width" id="gmap_mini" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=ru&amp;geocode=&amp;q=Manhattan,+New+York,+NY,+United+States&amp;aq=0&amp;oq=monheten&amp;sll=37.0625,-95.677068&amp;sspn=65.430355,129.814453&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=%D0%9C%D0%B0%D0%BD%D1%85%D1%8D%D1%82%D1%82%D0%B5%D0%BD,+%D0%9D%D1%8C%D1%8E-%D0%99%D0%BE%D1%80%D0%BA,+%D0%9D%D1%8C%D1%8E+%D0%99%D0%BE%D1%80%D0%BA,+%D0%9D%D1%8C%D1%8E-%D0%99%D0%BE%D1%80%D0%BA&amp;ll=40.790278,-73.959722&amp;spn=0.015612,0.031693&amp;z=13&amp;output=embed"></iframe>
-						</li>
-						<li class="m_bottom_10">
-							<div class="clearfix m_bottom_10">
-								<i class="fa fa-phone f_left color_dark"></i>
-								<p class="contact_e">800-559-65-80</p>
-							</div>
-						</li>
-						<li class="m_bottom_10">
-							<div class="clearfix m_bottom_10">
-								<i class="fa fa-envelope f_left color_dark"></i>
-								<a class="contact_e default_t_color" href="mailto:#">info@companyname.com</a>
-							</div>
-						</li>
-						<li>
-							<div class="clearfix">
-								<i class="fa fa-clock-o f_left color_dark"></i>
-								<p class="contact_e">Monday - Friday: 08.00-20.00 <br>Saturday: 09.00-15.00<br> Sunday: closed</p>
-							</div>
-						</li>
-					</ul>
-				</div>	
-			</li>
-		</ul>
 		<!--custom popup-->
 		<div class="popup_wrap d_none" id="quick_view_product">
 			<section class="popup r_corners shadow">

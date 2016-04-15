@@ -20,14 +20,19 @@
                                         </li>           
                                     </ul>
                                 </li>
-                                 <li><a><i class="fa fa-edit"></i> Orders <span class="fa fa-chevron-down"></span></a>
+                                 <li><a><i class="fa fa-edit"></i> Bidding Results <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu" style="display: none">
-                                        <li><a href="vieworder.php">Order History</a>
+                                        <li><a href="viewallbids.php">All Bidding Details</a>
                                         </li>
-                                        <li><a href="orderyettoship.php">Orders Yet to Ship</a>
+                                        <li><a href="bidswon.php">Bids That Ended</a>
                                         </li>
-                                        <li><a href="completedorder.php">Completed orders</a>
-                                        </li>
+                                       
+                                    </ul>
+                                </li>
+                                  <li><a><i class="fa fa-edit"></i> User Details <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="alluser.php">All Users</a>
+                                        </li>                                       
                                     </ul>
                                 </li>
                                 

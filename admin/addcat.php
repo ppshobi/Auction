@@ -3,13 +3,21 @@ include_once("../includes/dbconn.php");
 
 include_once("adminfunctions.php");
 
-if(isadminloggedin()){
+if(isloggedin()){
     //do nothing stay here
 }
 else{
     header("location:login.php");
 }
-$seller=$_SESSION['auction_admin_id'];
+
+
+if(isadmin()){
+    $seller=$_SESSION['auction_admin_id'];
+}else{
+    $seller=$_SESSION['auction_user_id'];
+}
+
+
 ?>
 
 <?php
@@ -27,7 +35,7 @@ addcat();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>FarmerCart Admin</title>
+    <title>Online Auction Admin</title>
 
     <!-- Bootstrap core CSS -->
 
@@ -74,22 +82,12 @@ addcat();
                 <div class="left_col scroll-view">
 
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href="index.php" class="site_title"><i class="fa fa-paw"></i> <span>Farmer Cart Admin</span></a>
+                        <a href="index.php" class="site_title"><i class="fa fa-paw"></i> <span>Online Auction</span></a>
                     </div>
                     <div class="clearfix"></div>
 
 
-                    <!-- menu prile quick info -->
-                    <div class="profile">
-                        <div class="profile_pic">
-                            <img src="images/img.jpg" alt="..." class="img-circle profile_img">
-                        </div>
-                        <div class="profile_info">
-                            <span>Welcome,</span>
-                            <h2>Anthony Fernando</h2>
-                        </div>
-                    </div>
-                    <!-- /menu prile quick info -->
+                    <?php include_once("menuprofile.php");?>
 
                     <br />
 
